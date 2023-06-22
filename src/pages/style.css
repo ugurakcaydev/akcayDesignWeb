@@ -201,8 +201,23 @@ main {
     .formDiv {
         padding: 0;
     }
+    .aboutServices{
+        font-size: 15px;
+    }
 
     .leftCom {
-        max-width: 50%;
+        display: block;
+        text-align: center;
+        font-size: 32px;
+    }
+    .communication{
+        flex-direction: column;
+    }
+    .commButton{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .backToTop.visible{
+        display: none;
     }
 }
