@@ -46,6 +46,7 @@ function Form() {
             </div>
             <div className='emailDiv'>
                 <input
+                    autoComplete="none"
                     type='email'
                     name='email'
                     value={email}

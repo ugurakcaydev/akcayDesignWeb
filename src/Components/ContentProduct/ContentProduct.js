@@ -11,7 +11,7 @@ const products = [
     },
     {
         name: 'Mutfak Tasarımlarımız',
-        images: ["/Images/kitchen3.jpg", '/Images/kitchen1.jpg','/Images/kitchen2.jpg','/Images/kitchen4.jpg'] /*[/*'/Images/kitchen1.jpg', '/Images/kitchen2.jpg', '/Images/kitchen3.jpg', '/Images/kitchen4.jpg']*/
+        images: ["/Images/kitchen3.jpg", '/Images/kitchen1.jpg', '/Images/kitchen2.jpg', '/Images/kitchen4.jpg', "/Images/images1.jpg", "/Images/images1.jpg", "/Images/images1.jpg"] /*[/*'/Images/kitchen1.jpg', '/Images/kitchen2.jpg', '/Images/kitchen3.jpg', '/Images/kitchen4.jpg']*/
     },
     {
         name: 'Yemek Masası Tasarımlarımız',
