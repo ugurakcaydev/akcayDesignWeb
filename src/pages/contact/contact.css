@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap%27');
 
+.body{
+    width: 100%;
+    
+      
+      
+}
 .contactMain {
     background-color: #dad8d8;
     width: 100%;
@@ -37,6 +43,10 @@
 .rightComm {
     background-color: #bebbbb;
 }
+.rightComm iframe{
+    width: 100%;
+    height: 100%;
+}
 
 .hedarContainer {
     display: flex;
@@ -53,6 +63,7 @@
     justify-content: center;
     padding: 5% 0;
     column-gap: 9rem;
+    flex-direction: column;
 }
 
 .infoDiv {
@@ -61,9 +72,10 @@
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-    align-items: self-start;
+    align-items: self-start; /* Sıkıntı bir kısım */
     width: 350px;
     word-wrap: break-word;
+    
 }
 
 .infoIconDiv {
@@ -78,4 +90,48 @@
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
+}
+@media screen and (max-width:800px) {
+    .containerComm{
+        width: 100%;
+    }
+    .leftComm{
+        
+        max-width: 100%;
+    }
+    .rightComm{
+        display: none;
+    }
+    .informationContainer{
+        
+        align-items: center;
+        row-gap: 2rem;
+    }
+    .infoDiv{
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width:470px) {
+    .containerComm{
+        width: 100%;
+    }
+    .leftComm{
+        
+        max-width: 100%;
+    }
+    
+    .rightComm{
+        display: none;
+    }
+    .informationContainer{
+        width: auto;
+        row-gap: 2rem;
+    }
+   .infoDiv{
+    
+    width: 100%;
+   }
 }
