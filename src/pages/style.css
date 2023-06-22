@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap%27');
+
+main {
+    font-family: 'Poppins', sans-serif;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2% 5%;
+    /* gap: 3%; */
+    /* background-color: #ebebeb; */
+    background-color: #dad8d8;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 2.5rem 0;
+    color: #333;
+}
+
+
+.showAllProductButtonDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.showAllProductButtonDiv:hover {
+    cursor: pointer;
+}
+
+.containerComm {
+    width: 100%;
+    position: relative;
+    max-height: 260px;
+}
+
+.communication {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.commImg {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+
+}
+
+.leftCom {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+    padding: 1rem 2rem;
+    row-gap: 1rem;
+}
+
+.leftCom h2 {
+    font-size: 32px;
+    color: burlywood;
+}
+
+.leftCom p {
+    font-size: 15px;
+    color: #fff;
+    max-width: 600px;
+}
+
+.commButton {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border: 1px solid #fff;
+    font-size: 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .8rem;
+    color: #fff;
+    transition: color 2s ease;
+    z-index: 4;
+    background: transparent;
+}
+
+.commButton svg {
+    width: 35px;
+    height: auto;
+}
+
+.commButton:hover {
+    z-index: 2;
+    transition: color 2s ease;
+    color: #000;
+    cursor: pointer;
+}
+
+.commButton::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transition: transform 1s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(.5, .6, .4, .7);
+    transform: scaleX(0);
+}
+
+.commButton:hover::before {
+    transform: scaleX(1);
+}
+
+.formDiv {
+    display: flex;
+    column-gap: 2rem;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 4%;
+}
+
+.formImg {
+    border: 1px solid #8a2424;
+    width: 600px;
+}
+
+@media screen and (max-width:1040px) {
+    .content {
+        padding: 2%;
+    }
+
+    .communication {
+        padding: 0 2%;
+        column-gap: 1rem;
+    }
+
+    .leftCom {
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    .leftCom {
+        padding: 0;
+    }
+
+    .leftCom h2 {
+        font-size: 25px;
+    }
+
+    .leftCom p {
+        font-size: 13px;
+    }
+
+    .commButton {
+        padding: .5rem;
+        font-size: 13px;
+        width: 250px;
+        height: 60px;
+        column-gap: .2rem;
+    }
+
+    .formDiv {
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+
+    .formImg {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:470px) {
+    .header {
+        font-size: 23px;
+    }
+
+    .formDiv {
+        padding: 0;
+    }
+
+    .leftCom {
+        max-width: 50%;
+    }
+}

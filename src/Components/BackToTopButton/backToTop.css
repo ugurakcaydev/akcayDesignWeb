@@ -1,0 +1,33 @@
+.backToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: aliceblue;
+    z-index: 9999;
+    padding: .7rem .5rem;
+    cursor: pointer;
+    font-size: 16px;
+    column-gap: .2rem;
+}
+
+.backToTop svg {
+    width: 25px;
+}
+
+.backToTop:hover {
+    cursor: pointer;
+}
+
+.backToTop.visible {
+    opacity: 1;
+}
+

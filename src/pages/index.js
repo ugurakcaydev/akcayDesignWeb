@@ -1,0 +1,59 @@
+import React from 'react'
+import Navbar from "@/Components/Navbar/Navbar"
+import Slider from "@/Components/Slider/Slider"
+import ContentProduct from "@/Components/ContentProduct/ContentProduct"
+import Services from "@/Components/OurServices/Services"
+import "../Components/Navbar/Navbar.css"
+import Form from "@/Components/Form/Form"
+import "./style.css"
+import Footer from "@/Components/Footer/Footer"
+import BackToTopButton from '@/Components/BackToTopButton/BackToTopButton'
+import Link from 'next/link'
+function Main() {
+    return (
+        <main>
+            <BackToTopButton />
+            <Navbar />
+            <Slider />
+            <div className="content">
+                <div className="header">
+                    - Öne Çıkan Ürünlerimiz -
+                </div>
+                <ContentProduct />
+
+                <div className='header'>
+                    <p>- Hizmetlerimiz -</p>
+                </div>
+                <Services />
+                <div className='header'>
+                    <p>- Teklif Formu -</p>
+                </div>
+                <div className='formDiv'>
+                    <div className='formImg'>
+
+                    </div>
+                    <Form />
+                </div>
+            </div>
+            <div className="containerComm">
+                <img className="commImg" src="/Images/coffe3.jpg" />
+                <div className="communication">
+                    <div className="leftCom">
+                        <h2>KAHVEYE BEKLİYORUZ</h2>
+                        <p>Projelerimiz hakkında daha detaylı bilgi sahibi olmanız adına, sizi ofisimizde misafir etmekten mutluluk duyarız</p>
+                    </div>
+                    <button className="commButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                        </svg>
+                        Bizimle İletişime Geçin
+                    </button>
+                </div>
+            </div>
+            <Footer />
+
+        </main>
+    )
+}
+
+export default Main

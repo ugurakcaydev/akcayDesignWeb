@@ -1,0 +1,158 @@
+.footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+    text-align: center;
+    /*#ebebeb*/
+    background-color: #ebebeb;
+    padding-top: 2.5rem;
+}
+
+.topFooter {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+}
+
+.footerLogoDiv {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.footerLogoDiv img {
+    width: 200px;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.footerPDiv {
+    max-width: 630px;
+    width: 100%;
+    word-wrap: break-word;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.footerInputDiv {
+    width: 60%;
+    position: relative;
+    opacity: 0;
+    transition: opacity 1s ease;
+    max-width: 638px;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+.footerInputDiv.visible button {
+    right: -4rem;
+    transition: right 1s ease;
+}
+
+.footerInput {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border: 1px solid #ccc;
+    transition: border 1s ease-in;
+    font-size: 18px;
+    border-radius: 50px;
+}
+
+.footerInput:focus {
+    outline: none;
+    border: 1px solid #2b2d42;
+}
+
+.footerInputDiv button {
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8rem;
+    padding: 0 2.5rem;
+    height: 100%;
+    border: 1px solid #ccc;
+    background-color: #2b2d42;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.55);
+    color: #fff;
+    transition: right 1s ease;
+    font-size: 20px;
+    font-family: 'Poppins', Times, serif;
+}
+
+.footerLine {
+    width: 1px;
+    height: 30px;
+    background-color: #000;
+}
+
+.commFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.commFooterInside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    cursor: pointer;
+}
+
+.commFooterInside svg {
+    width: 35px;
+    height: auto;
+}
+
+.botFooter {
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: .5rem 0;
+    font-size: 12px;
+}
+
+@media screen and (max-width:500px) {
+
+    .commFooter {
+        flex-direction: column;
+    }
+
+    .visible button {
+        padding: 0 2rem;
+        font-size: 15px;
+    }
+
+    .footerInput {
+        padding: .8rem 3rem .8rem 1rem;
+        font-size: 15px;
+    }
+
+    .footerInputDiv {
+        width: 100%;
+    }
+
+    .footerInputDiv.visible button {
+        right: 0;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .botFooter {
+        font-size: 8px;
+    }
+}

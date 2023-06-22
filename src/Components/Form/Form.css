@@ -1,0 +1,106 @@
+.inputContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.5rem;
+}
+
+.firstAndLastDiv {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.firstNameDiv,
+.lastNameDiv {
+    width: 45%;
+    position: relative;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+input,
+textarea {
+    font-size: 16px;
+    border: 2px outset #ccc;
+}
+
+.firstNameDiv>input,
+.lastNameDiv>input {
+    width: 100%;
+    padding: .8rem;
+
+    border-radius: 6px;
+}
+
+.firstNameDiv label,
+.lastNameDiv label,
+.emailDiv label,
+.phoneDiv label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
+    font-size: 15px;
+    color: rgb(179, 176, 176);
+    pointer-events: none;
+    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .5s;
+
+}
+
+.emailDiv,
+.phoneDiv {
+    width: 100%;
+    position: relative;
+}
+
+.emailDiv input,
+.phoneDiv input,
+textarea {
+    width: 100%;
+    padding: .8rem;
+    border-radius: 6px;
+
+}
+
+textarea {
+    resize: none;
+    min-height: 130px;
+    word-wrap: break-word;
+
+}
+
+textarea::placeholder {
+    color: rgb(179, 176, 176);
+}
+
+/* .firstNameDiv.active>input:focus~label,
+.lastNameDiv.active>input:focus~label,
+.emailDiv.active>input:focus~label,
+.activeInput>input:focus~label { */
+.activeLabel {
+    top: -10px !important;
+    left: 5px !important;
+    color: #000 !important;
+    font-size: 13px !important;
+    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) .5s !important;
+}
+
+.messageButton {
+    padding: .8rem;
+    border-radius: 6px;
+    outline: none;
+    border: 2px outset #ccc;
+    color: #fff;
+    background-color: #333533;
+    cursor: pointer;
+
+}
+
+
+
+@media screen and (max-width:800px) {}

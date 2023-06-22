@@ -1,0 +1,75 @@
+.servicesContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    height: auto;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    max-width: 1367.3px;
+}
+
+.imagesServices {
+    width: 250px;
+    height: 250px;
+    background-color: antiquewhite;
+    position: relative;
+    perspective: 1000px;
+    /* 3D perspektifi ayarlayın */
+    transition: transform .5s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.imagesServices:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.imagesServices img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aboutServices {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* .flip {
+    transform-style: preserve-3d;
+    /* 3D dönüş stilini koruyun 
+    transform: rotateX(360deg);
+} */
+
+@media screen and (max-width:1040px) {
+    .imagesServices {
+        width: 212px;
+        height: 212px;
+    }
+
+    .aboutServices {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .imagesServices {
+        width: 160px;
+        height: 160px;
+    }
+
+    .aboutServices {
+        font-size: 13px;
+    }
+
+    .servicesContainer {
+        padding: 0;
+    }
+}
