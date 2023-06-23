@@ -1,65 +1,50 @@
-/* .socialContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: self-start;
-    row-gap: .5rem;
-    position: fixed;
-    bottom: 2.2rem;
-    left: 2.2rem;
-    padding: .5rem;
-    z-index: 999;
-} */
-
 .containericons {
     position: fixed;
     z-index: 99;
     bottom: 2rem;
     left: 2rem;
-    width: 50px;
-    height: 50px;
     display: flex;
-    align-items: center;
     border-radius: 50%;
-    transition: all 5s ease;
 }
 
-.containericons svg {
-    width: 35px;
-    height: 35px;
-    position: absolute;
-   
+.svgDiv {
+    width: 45px;
+    height: 45px;
     background-color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: .8rem;
+    border-radius: 50%;
+    transition: all .2s ease;
+}
 
+.svgDiv svg {
+    position: absolute;
+    width: 25px;
+    left: .6rem;
+    top: .6rem;
 }
 
 .pDiv {
-    width: 50px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    transform: translateX(10px);
+    overflow: hidden;
     opacity: 0;
-    transition: opacity 5s ease, transform .5s ease, width .5s ease;
-    font-size: 14px;
-    background-color: none;
-    background-color: aqua;
-    
-}
-
-
-.containericons:hover {
-    width: auto;
-    border-radius: 8px;
-    transition: all .7s ease;
-}
-
-.containericons:hover .pDiv {
-    width: 100%;
-    padding: .5rem;
-    align-items: center;
+    margin-left: 2.5rem;
     background-color: #fff;
+    transition: all .2s ease;
+}
+
+.svgDiv:hover {
+    width: 100%;
+    border-radius: 8px;
+    transition: all cubic-bezier(0.6, -0.28, 0.735, 0.045) ease;
+    justify-content: space-evenly;
+}
+
+.svgDiv:hover .pDiv {
     opacity: 1;
-    transform: translateX(50px);
-    /* Sola kaydırma */
-    transition: opacity 2.5s ease, transform 1.5s ease,width 2s ease;
+    transition: all 1s ease;
+    transform: translateX(5px);
 }
