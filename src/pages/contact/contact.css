@@ -61,7 +61,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    column-gap: 4rem;
+    column-gap: 3rem;
     padding: 5%;
     
     
@@ -74,8 +74,8 @@
     flex-direction: column;
     row-gap: 2rem;
     align-items: self-start; /* ?? */
-    max-width: 450px;
-    width: 350px;
+    max-width: 80%;
+    width: 400px;
     min-width: 300px;
     word-wrap: break-word;
     
@@ -111,39 +111,51 @@
 @media screen and (max-width:800px) {
     .containerComm{
         width: 100%;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        row-gap: 2rem;
+        
     }
     .leftComm{
         
         max-width: 100%;
     }
     .rightComm{
-        display: none; /*GoogleMap leftComm üstüne gelecek*/
+        max-width: 100%;
+        height: 300px;
+        max-height: 600px;
     }
+    
     .informationContainer{
         flex-direction: column;
-        align-items: center;
+        width: auto;
         row-gap: 2rem;
     }
-    .infoDiv{
-        align-items: center;
-        text-align: center;
-        width: 80%;
-    }
+   .infoDiv{
+    min-width: 400px;
+    width: 100%;
+   }
 
 }
 
-@media screen and (max-width:470px) {
+@media screen and (max-width:470px)  {
     .containerComm{
         width: 100%;
+        display: flex;
+        flex-direction:column;
+        row-gap: 2rem;
     }
     .leftComm{
         
         max-width: 100%;
     }
-    
     .rightComm{
-        display: none; /*GoogleMap leftComm üstüne gelecek*/
+        max-width: 100%;
+        height: 300px;
+        max-height: 400px;
     }
+    
     .informationContainer{
         flex-direction: column;
         width: auto;
@@ -152,6 +164,7 @@
    .infoDiv{
     
     width: 100%;
+    min-width: 300px;
    }
    .backToTop.visible{
     display: none;
