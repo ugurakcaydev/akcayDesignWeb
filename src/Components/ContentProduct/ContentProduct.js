@@ -111,10 +111,6 @@ function ContentProduct() {
                         <Link className="button button1"
                             href={{
                                 pathname: `/product-details/${product.name.toLowerCase().replace(/\s+/g, '-')}`,
-                                query: {
-                                    name: encodeURIComponent(product.name),
-                                    images: product.images.map((image) => encodeURIComponent(image))
-                                },
                             }}>İNCELE</Link>
                     </div>
                 </div>

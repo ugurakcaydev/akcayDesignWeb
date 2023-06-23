@@ -8,10 +8,12 @@ import Form from "@/Components/Form/Form"
 import "./style.css"
 import Footer from "@/Components/Footer/Footer"
 import BackToTopButton from '@/Components/BackToTopButton/BackToTopButton'
+import SocialMedia from "@/Components/SocialMedia/index"
 import Link from 'next/link'
 function Main() {
     return (
         <main>
+            <SocialMedia />
             <BackToTopButton />
             <Navbar />
             <Slider />

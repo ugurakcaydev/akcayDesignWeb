@@ -1,0 +1,65 @@
+/* .socialContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    row-gap: .5rem;
+    position: fixed;
+    bottom: 2.2rem;
+    left: 2.2rem;
+    padding: .5rem;
+    z-index: 999;
+} */
+
+.containericons {
+    position: fixed;
+    z-index: 99;
+    bottom: 2rem;
+    left: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 5s ease;
+}
+
+.containericons svg {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+   
+    background-color: #fff;
+
+}
+
+.pDiv {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    transform: translateX(10px);
+    opacity: 0;
+    transition: opacity 5s ease, transform .5s ease, width .5s ease;
+    font-size: 14px;
+    background-color: none;
+    background-color: aqua;
+    
+}
+
+
+.containericons:hover {
+    width: auto;
+    border-radius: 8px;
+    transition: all .7s ease;
+}
+
+.containericons:hover .pDiv {
+    width: 100%;
+    padding: .5rem;
+    align-items: center;
+    background-color: #fff;
+    opacity: 1;
+    transform: translateX(50px);
+    /* Sola kaydırma */
+    transition: opacity 2.5s ease, transform 1.5s ease,width 2s ease;
+}
