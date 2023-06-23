@@ -21,7 +21,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    column-gap: 3rem;
+    column-gap: 5rem;
 }
 
 .leftComm,
@@ -61,9 +61,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 5% 0;
-    column-gap: 9rem;
-    flex-direction: column;
+    column-gap: 4rem;
+    padding: 5%;
+    
+    
 }
 
 .infoDiv {
@@ -72,8 +73,10 @@
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-    align-items: self-start; /* Sıkıntı bir kısım */
+    align-items: self-start; /* ?? */
+    max-width: 450px;
     width: 350px;
+    min-width: 300px;
     word-wrap: break-word;
     
 }
@@ -91,6 +94,20 @@
     flex-direction: column;
     row-gap: 1rem;
 }
+@media screen and (max-width:1040px) {
+    .informationContainer{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+    }
+    .infoDiv{
+        align-items: center;
+        text-align: center;
+        width: 80%;
+    }
+
+}
+
 @media screen and (max-width:800px) {
     .containerComm{
         width: 100%;
@@ -100,16 +117,17 @@
         max-width: 100%;
     }
     .rightComm{
-        display: none;
+        display: none; /*GoogleMap leftComm üstüne gelecek*/
     }
     .informationContainer{
-        
+        flex-direction: column;
         align-items: center;
         row-gap: 2rem;
     }
     .infoDiv{
         align-items: center;
         text-align: center;
+        width: 80%;
     }
 
 }
@@ -124,9 +142,10 @@
     }
     
     .rightComm{
-        display: none;
+        display: none; /*GoogleMap leftComm üstüne gelecek*/
     }
     .informationContainer{
+        flex-direction: column;
         width: auto;
         row-gap: 2rem;
     }
@@ -134,4 +153,7 @@
     
     width: 100%;
    }
+   .backToTop.visible{
+    display: none;
+}
 }
