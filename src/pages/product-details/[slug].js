@@ -6,27 +6,64 @@ import Link from 'next/link';
 import Form from '@/Components/Form/Form';
 import "./style.css"
 import Footer from '@/Components/Footer/Footer';
+import BackToTopButton from '@/Components/BackToTopButton/BackToTopButton';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, FreeMode, Pagination } from 'swiper';
 
+
+const products = [
+    {
+        name: 'Çocuk ve Genç Odası Tasarımlarımız',
+        images: [], /*['/Images/youngroom1.jpg', /* '/Images/youngroom2.jpg']*/
+        slug:"cocuk-ve-genç-odası-tasarımlarımız"
+    },
+    {
+        name: 'Mutfak Tasarımlarımız',
+        images: ["/Images/kitchen3.jpg", '/Images/kitchen1.jpg', '/Images/kitchen2.jpg', '/Images/kitchen4.jpg', "/Images/images1.jpg", "/Images/images1.jpg", "/Images/images1.jpg"], /*[/*'/Images/kitchen1.jpg', '/Images/kitchen2.jpg', '/Images/kitchen3.jpg', '/Images/kitchen4.jpg']*/
+        slug: "mutfak-tasarımlarımız"
+    },
+    {
+        name: 'Yemek Masası Tasarımlarımız',
+        images: [], //'/Images/dinnertable1.jpg' /*['/Images/dinnertable1.jpg']*/
+        slug:"yemek-masası-tasarımlarımız"
+    },
+    {
+        name: 'Yatak Odası Tasarımlarımız',
+        images: [],//'/Images/bedroom2.jpg' /*['/Images/bedroom1.jpg', '/Images/bedroom2.jpg', '/Images/bedroom3.jpg']*/
+        slug:"yatak-odası-tasarımlarımız"
+    },
+    {
+        name: 'Gardırop Tasarımlarımız',
+        images: [],//'/Images/gardırop1.jpg',
+        slug:"gardırop-tasarımlarımız"
+    },
+    {
+        name: 'Portmanto Tasarımlarımız',
+        images: [],//'/Images/drawr1.jpg',
+        slug: "portmanto-tasarımlarımız"
+
+    },
+    {
+        name: 'Banyo Tasarımlarımız',
+        images: [],
+        slug:"banyo-tasarımlarımız"
+    },
+    {
+        name: 'Banyo Tasarımlarımız',
+        images: [],
+        slug:"banyo-tasarımlarımız"
+    },
+
+];
+
+
 export default function Page() {
     const router = useRouter();
-    const { name, images } = router.query;
-    const decodedName = decodeURIComponent(name);
-    const [decodedImages, setDecodedImages] = useState([]);
+    const slug = router.query.slug
 
-    useEffect(() => {
-        if (images && Array.isArray(images)) {
-            const decodeImagesAsync = async () => {
-                const decoded = await Promise.all(
-                    images.map((image) => decodeURIComponent(image))
-                );
-                setDecodedImages(decoded);
-            };
+    const decodedImages = products.find((product) => product.slug === slug)?.images ?? []
+    const decodedName =  products.find((product) => product.slug === slug)?.name
 
-            decodeImagesAsync();
-        }
-    }, [images]);
 
     const [selectedImage, setSelectedImage] = useState(0);
     const [selectedExp, setSelectedExp] = useState(true)
@@ -40,9 +77,10 @@ export default function Page() {
 
     return (
         <>
+            <BackToTopButton />
             <Navbar />
             <div style={{ marginTop: "105px", padding: "2% 5%" }}>
-                <div className='header'>
+                <div className='headerDetails'>
                     - {decodedName} -
                 </div>
                 <div className='smallAndBigImageContainer'>
