@@ -7,6 +7,7 @@ import Form from '@/Components/Form/Form';
 import "./style.css"
 import Footer from '@/Components/Footer/Footer';
 import BackToTopButton from '@/Components/BackToTopButton/BackToTopButton';
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, FreeMode, Pagination } from 'swiper';
 
@@ -15,7 +16,7 @@ const products = [
     {
         name: 'Çocuk ve Genç Odası Tasarımlarımız',
         images: [], /*['/Images/youngroom1.jpg', /* '/Images/youngroom2.jpg']*/
-        slug:"cocuk-ve-genç-odası-tasarımlarımız"
+        slug: "cocuk-ve-genç-odası-tasarımlarımız"
     },
     {
         name: 'Mutfak Tasarımlarımız',
@@ -25,17 +26,17 @@ const products = [
     {
         name: 'Yemek Masası Tasarımlarımız',
         images: [], //'/Images/dinnertable1.jpg' /*['/Images/dinnertable1.jpg']*/
-        slug:"yemek-masası-tasarımlarımız"
+        slug: "yemek-masası-tasarımlarımız"
     },
     {
         name: 'Yatak Odası Tasarımlarımız',
         images: [],//'/Images/bedroom2.jpg' /*['/Images/bedroom1.jpg', '/Images/bedroom2.jpg', '/Images/bedroom3.jpg']*/
-        slug:"yatak-odası-tasarımlarımız"
+        slug: "yatak-odası-tasarımlarımız"
     },
     {
         name: 'Gardırop Tasarımlarımız',
         images: [],//'/Images/gardırop1.jpg',
-        slug:"gardırop-tasarımlarımız"
+        slug: "gardırop-tasarımlarımız"
     },
     {
         name: 'Portmanto Tasarımlarımız',
@@ -46,23 +47,33 @@ const products = [
     {
         name: 'Banyo Tasarımlarımız',
         images: [],
-        slug:"banyo-tasarımlarımız"
+        slug: "banyo-tasarımlarımız"
     },
     {
         name: 'Banyo Tasarımlarımız',
         images: [],
-        slug:"banyo-tasarımlarımız"
+        slug: "banyo-tasarımlarımız"
     },
 
 ];
 
 
 export default function Page() {
+
+    const [loading, setLoading] = useState(false)
+
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000)
+    }, [])
+
     const router = useRouter();
     const slug = router.query.slug
 
     const decodedImages = products.find((product) => product.slug === slug)?.images ?? []
-    const decodedName =  products.find((product) => product.slug === slug)?.name
+    const decodedName = products.find((product) => product.slug === slug)?.name
 
 
     const [selectedImage, setSelectedImage] = useState(0);
@@ -77,92 +88,112 @@ export default function Page() {
 
     return (
         <>
-            <BackToTopButton />
-            <Navbar />
-            <div style={{ marginTop: "105px", padding: "2% 5%" }}>
-                <div className='headerDetails'>
-                    - {decodedName} -
-                </div>
-                <div className='smallAndBigImageContainer'>
-                    {decodedImages !== null ? (
-                        // <Swiper
-                        //     direction={"vertical"}
-                        //     pagination={{
-                        //         clickable: true,
-                        //     }}
-                        //     freeMode={true}
-                        //     mousewheel={true}
-                        //     modules={[Mousewheel, FreeMode, Pagination]}
-                        //     slidesPerView={5}
-                        //     spaceBetween={30}
-                        //     className="mySwiper"
-                        // >
-                        //     {
-                        //         decodedImages.map((image, index) => (
-                        //             <div key={index} >
-                        //                 <SwiperSlide
-                        //                     className={`img ${selectedImage === index ? 'selected' : ''}`}
-                        //                     onClick={() => handleImageClick(index)}
-                        //                 ><img src={image} /></SwiperSlide>
-                        //             </div>
-                        //         ))
-                        //     }
-                        // </Swiper>
-                        <div className='smallImageContainer'>
-                            {
-                                decodedImages.map((image, index) => (
-                                    <div key={index}
-                                        className={`img ${selectedImage === index ? 'selected' : ''}`}
-                                        onClick={() => handleImageClick(index)}
-                                    >
-                                        <img src={image} />
-                                    </div>
-                                ))
-                            }
-                        </div>
-                    ) : (
-                        <div>Fotoğraf Bekleniyor..</div>
-                    )}
 
-                    <div className='bigImageContainer'>
-                        {decodedImages !== null && (
-                            <img src={decodedImages[selectedImage]} />
-                        )}
+            {
+                loading ?
+                    <div className="loadingScreeen">
+                        <ClimbingBoxLoader
+                            color={"#fff"}
+                            loading={loading}
+                            // cssOverride={override}
+                            size={20}
+                        // aria-label="Loading Spinner"
+                        // data-testid="loader"
+                        />
                     </div>
-                </div>
-            </div>
-            <div className='explanation'>
-                <div className='explanation-header'>
-                    <div onClick={() => handleExpClick(true)}
-                        className={selectedExp ? 'selected' : ''}
-                    >Açıklama</div>
-                    <div onClick={() => handleExpClick(false)}
-                        className={!selectedExp ? 'selected' : ''}
-                    >Sipariş Ver</div>
-                </div>
-                {selectedExp ? (
-                    <div className='explanation-content'>
-                        {/* Açıklama içeriği buraya gelecek */}
-                        {/* <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" ,rowGap:".5rem",padding:".5rem"}}> */}
-                        <p>Tüm ürünlerimiz size özel olarak, sipariş üzerine üretilmektedir.</p>
-                        <p>Ürünlerimiz kesinlikle demonte ve hazır kalıp ürünler değildir.
-                        </p>
-                        <p>Dilediğiniz ölçüde, renkte ve özellikte istediğiniz modeli üretebiliriz.
-                        </p>
-                        <p>İstanbul içi ücretsiz nakliye ve kurulum hizmetimiz mevcuttur.
-                        </p>
-                        <p>Detaylı bilgi için <Link className='link' href="/contact">İletişim sayfamızdan</Link> bizimle iletişime geçebileceğiniz gibi buraya tıklayarak WhatsApp üzerinden de iletişim kurabilirsiniz.
-                        </p>
-                        {/* </div> */}
-                    </div>
-                ) : (
-                    <div className='order-content'>
-                        {/* Sipariş içeriği buraya gelecek */}
-                        <Form />
-                    </div>
-                )}
-            </div>
-            <Footer />
+                    :
+                    <>
+                        <BackToTopButton />
+                        <Navbar />
+                        <div style={{ marginTop: "105px", padding: "2% 5%" }}>
+                            <div className='headerDetails'>
+                                - {decodedName} -
+                            </div>
+                            <div className='smallAndBigImageContainer'>
+                                {decodedImages !== null ? (
+                                    // <Swiper
+                                    //     direction={"vertical"}
+                                    //     pagination={{
+                                    //         clickable: true,
+                                    //     }}
+                                    //     freeMode={true}
+                                    //     mousewheel={true}
+                                    //     modules={[Mousewheel, FreeMode, Pagination]}
+                                    //     slidesPerView={5}
+                                    //     spaceBetween={30}
+                                    //     className="mySwiper"
+                                    // >
+                                    //     {
+                                    //         decodedImages.map((image, index) => (
+                                    //             <div key={index} >
+                                    //                 <SwiperSlide
+                                    //                     className={`img ${selectedImage === index ? 'selected' : ''}`}
+                                    //                     onClick={() => handleImageClick(index)}
+                                    //                 ><img src={image} /></SwiperSlide>
+                                    //             </div>
+                                    //         ))
+                                    //     }
+                                    // </Swiper>
+                                    <div style={{ height: "100%", overflow: "auto" }}>
+                                        <div className='smallImageContainer'>
+                                            {
+                                                decodedImages.map((image, index) => (
+                                                    <div key={index}
+                                                        className={`img ${selectedImage === index ? 'selected' : ''}`}
+                                                        onClick={() => handleImageClick(index)}
+                                                    >
+                                                        <img src={image} />
+                                                    </div>
+                                                ))
+                                            }
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div>Fotoğraf Bekleniyor..</div>
+                                )}
+
+                                <div className='bigImageContainer'>
+                                    {decodedImages !== null && (
+                                        <img src={decodedImages[selectedImage]} />
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                        <div className='explanation'>
+                            <div className='explanation-header'>
+                                <div onClick={() => handleExpClick(true)}
+                                    className={selectedExp ? 'selected' : ''}
+                                >Açıklama</div>
+                                <div onClick={() => handleExpClick(false)}
+                                    className={!selectedExp ? 'selected' : ''}
+                                >Sipariş Ver</div>
+                            </div>
+                            {selectedExp ? (
+                                <div className='explanation-content'>
+                                    {/* Açıklama içeriği buraya gelecek */}
+                                    {/* <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" ,rowGap:".5rem",padding:".5rem"}}> */}
+                                    <p>Tüm ürünlerimiz size özel olarak, sipariş üzerine üretilmektedir.</p>
+                                    <p>Ürünlerimiz kesinlikle demonte ve hazır kalıp ürünler değildir.
+                                    </p>
+                                    <p>Dilediğiniz ölçüde, renkte ve özellikte istediğiniz modeli üretebiliriz.
+                                    </p>
+                                    <p>İstanbul içi ücretsiz nakliye ve kurulum hizmetimiz mevcuttur.
+                                    </p>
+                                    <p>Detaylı bilgi için <Link className='link' href="/contact">İletişim sayfamızdan</Link> bizimle iletişime geçebileceğiniz gibi buraya tıklayarak WhatsApp üzerinden de iletişim kurabilirsiniz.
+                                    </p>
+                                    {/* </div> */}
+                                </div>
+                            ) : (
+                                <div className='order-content'>
+                                    {/* Sipariş içeriği buraya gelecek */}
+                                    <Form />
+                                </div>
+                            )}
+                        </div>
+                        <Footer />
+                    </>
+            }
+
         </>
     );
 

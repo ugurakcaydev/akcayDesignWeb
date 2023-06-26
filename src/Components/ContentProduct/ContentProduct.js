@@ -63,8 +63,13 @@ function ContentProduct() {
                 <div className='outsideProduct' key={index}>
                     <div className='productImage'>
                         {product.images.length > 0 ? (
-                            <div className='containerImage'>
-                                {/* {product.images.map((image, imageIndex) => (
+                            <Link
+                                href={{
+                                    pathname: `/product-details/${product.name.toLowerCase().replace(/\s+/g, '-')}`,
+                                }}
+                            >
+                                <div className='containerImage'>
+                                    {/* {product.images.map((image, imageIndex) => (
                                     <img
                                         key={imageIndex}
                                         src={image}
@@ -74,15 +79,16 @@ function ContentProduct() {
                                         className='productImg'
                                     />
                                 ))} */}
-                                <img
-                                    // key={inde}
-                                    src={product.images[0]}
-                                    alt="Ürün Resmi"
-                                    // loading="lazy"
-                                    // onClick={() => handleImageClick(product.images)}
-                                    className='productImg'
-                                />
-                            </div>
+                                    <img
+                                        // key={inde}
+                                        src={product.images[0]}
+                                        alt="Ürün Resmi"
+                                        // loading="lazy"
+                                        // onClick={() => handleImageClick(product.images)}
+                                        className='productImg'
+                                    />
+                                </div>
+                            </Link>
 
                         ) : (
                             <p>Resim bulunamadı</p>

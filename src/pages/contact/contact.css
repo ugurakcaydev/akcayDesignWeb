@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap%27');
 
-.body{
+.loadingScreeen {
     width: 100%;
-    
-      
-      
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dad8d8;
 }
+
+.body {
+    width: 100%;
+}
+
 .contactMain {
     background-color: #dad8d8;
     width: 100%;
@@ -37,13 +44,14 @@
 
 .leftComm {
     row-gap: 2.5rem;
-    
+
 }
 
 .rightComm {
     background-color: #bebbbb;
 }
-.rightComm iframe{
+
+.rightComm iframe {
     width: 100%;
     height: 100%;
 }
@@ -63,8 +71,8 @@
     justify-content: center;
     column-gap: 3rem;
     padding: 5%;
-    
-    
+
+
 }
 
 .infoDiv {
@@ -73,12 +81,13 @@
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-    align-items: self-start; /* ?? */
+    align-items: self-start;
+    /* ?? */
     max-width: 80%;
     width: 400px;
     min-width: 300px;
     word-wrap: break-word;
-    
+
 }
 
 .infoIconDiv {
@@ -94,13 +103,15 @@
     flex-direction: column;
     row-gap: 1rem;
 }
+
 @media screen and (max-width:1040px) {
-    .informationContainer{
+    .informationContainer {
         flex-direction: column;
         align-items: center;
         row-gap: 2rem;
     }
-    .infoDiv{
+
+    .infoDiv {
         align-items: center;
         text-align: center;
         width: 80%;
@@ -109,64 +120,71 @@
 }
 
 @media screen and (max-width:800px) {
-    .containerComm{
+    .containerComm {
         width: 100%;
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         align-items: center;
         row-gap: 2rem;
-        
+
     }
-    .leftComm{
-        
+
+    .leftComm {
+
         max-width: 100%;
     }
-    .rightComm{
+
+    .rightComm {
         max-width: 100%;
         height: 300px;
         max-height: 600px;
     }
-    
-    .informationContainer{
+
+    .informationContainer {
         flex-direction: column;
         width: auto;
         row-gap: 2rem;
     }
-   .infoDiv{
-    min-width: 400px;
-    width: 100%;
-   }
+
+    .infoDiv {
+        min-width: 400px;
+        width: 100%;
+    }
 
 }
 
-@media screen and (max-width:470px)  {
-    .containerComm{
+@media screen and (max-width:470px) {
+    .containerComm {
         width: 100%;
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         row-gap: 2rem;
     }
-    .leftComm{
-        
+
+    .leftComm {
+
         max-width: 100%;
     }
-    .rightComm{
+
+    .rightComm {
         max-width: 100%;
         height: 300px;
         max-height: 400px;
     }
-    
-    .informationContainer{
+
+    .informationContainer {
         flex-direction: column;
         width: auto;
         row-gap: 2rem;
     }
-   .infoDiv{
-    
-    width: 100%;
-    min-width: 300px;
-   }
-   .backToTop.visible{
-    display: none;
-}
+
+    .infoDiv {
+
+        width: 100%;
+        min-width: 300px;
+    }
+
+    .backToTop.visible {
+        display: none;
+    }
 }

@@ -1,49 +1,63 @@
 .containericons {
     position: fixed;
     z-index: 99;
-    bottom: 2.5rem;
+    bottom: 2rem;
     left: 2rem;
-    display: flex;
-    border-radius: 50%;
 }
 
-.svgDiv {
-    width: 45px;
-    height: 45px;
-    background-color: #fff;
+.svgPDiv {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    padding: .8rem;
+    padding: 1.5rem;
     border-radius: 50%;
-    transition: all .2s ease;
+    transition: all .2s ease-in;
+    
 }
 
-.svgDiv svg {
+.svgDiv {
+    width: 40px;
+    height: 40px;
     position: absolute;
-    width: 25px;
-    left: .6rem;
-    top: .6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.svgPDiv svg {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pDiv {
     overflow: hidden;
     opacity: 0;
     margin-left: 2.5rem;
-    background-color: #fff;
-    transition: all .2s ease;
+    transition: all 1s ease;
 }
 
-.svgDiv:hover {
+.svgPDiv:hover {
     width: 100%;
-    border-radius: 8px;
-    transition: all cubic-bezier(0.6, -0.28, 0.735, 0.045) ease;
+    border-radius: 20px;
+    transition: all 1s ease;
     justify-content: space-evenly;
+    background-color: #fff;
 }
 
-.svgDiv:hover .pDiv {
+.svgPDiv:hover .pDiv {
     opacity: 1;
     transition: all 1s ease;
     transform: translateX(5px);

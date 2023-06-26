@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap%27');
 
+
+.loadingScreeen {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dad8d8;
+}
+
+
 main {
     font-family: 'Poppins', sans-serif;
 }
@@ -38,7 +49,7 @@ main {
     cursor: pointer;
 }
 
-.containerComm {
+.containerCom {
     width: 100%;
     position: relative;
     max-height: 260px;
@@ -82,6 +93,10 @@ main {
     font-size: 15px;
     color: #fff;
     max-width: 600px;
+}
+
+.commLink {
+    text-decoration: none;
 }
 
 .commButton {
@@ -201,7 +216,8 @@ main {
     .formDiv {
         padding: 0;
     }
-    .aboutServices{
+
+    .aboutServices {
         font-size: 15px;
     }
 
@@ -210,14 +226,17 @@ main {
         text-align: center;
         font-size: 32px;
     }
-    .communication{
+
+    .communication {
         flex-direction: column;
     }
-    .commButton{
+
+    .commButton {
         font-size: 15px;
         font-weight: 600;
     }
-    .backToTop.visible{
+
+    .backToTop.visible {
         display: none;
     }
 }
