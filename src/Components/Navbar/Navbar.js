@@ -50,7 +50,7 @@ function Navbar() {
                 <div className={`navbarContent ${isMenuActive ? 'menuActive' : ''}`} style={{ position: isMenuActive ? "absolute" : "relative" }} >
                     <ul className="contentUl">
                         <li className="contentLi"><Link href="/">Anasayfa</Link></li>
-                        <li className="contentLi"><a href="">Fotoğraf Galerisi</a></li>
+                        <li className="contentLi"><Link href="/photo-gallery">Fotoğraf Galerimiz</Link></li>
                         <li className="contentLi"><a href="">Hakkımızda</a></li>
                         <li className="contentLi"><Link href="/contact">İletişim</Link></li>
                         <li className="contentLi"><a>Teklif Ver</a></li>
