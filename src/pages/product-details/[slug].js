@@ -134,7 +134,7 @@ export default function Page() {
                                     //         ))
                                     //     }
                                     // </Swiper>
-                                    <div style={{ height: "100%", overflow: "auto" }}>
+                                    <div  className="scrollDiv">
                                         <div className='smallImageContainer'>
                                             {
                                                 decodedImages.map((image, index) => (
