@@ -96,7 +96,7 @@ textarea::placeholder {
     outline: none;
     border: 2px outset #ccc;
     color: #fff;
-    background-color: #333533;
+    background: linear-gradient(to right, #463f3a, #333533, #202020);
     cursor: pointer;
 
 }
