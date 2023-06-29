@@ -6,6 +6,7 @@ import Services from "@/Components/OurServices/Services"
 import "../Components/Navbar/Navbar.css"
 import Form from "@/Components/Form/Form"
 import "./style.css"
+import "../app/globals.css"
 import Footer from "@/Components/Footer/Footer"
 import BackToTopButton from '@/Components/BackToTopButton/BackToTopButton'
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
@@ -45,20 +46,20 @@ function Main() {
                         <Slider />
                         <div className="content">
                             <div className="header">
-                                - Öne Çıkan Ürünlerimiz -
+                                Öne Çıkan Ürünlerimiz
                             </div>
                             <ContentProduct />
 
                             <div className='header'>
-                                <p>- Hizmetlerimiz -</p>
+                                <p>Hizmetlerimiz</p>
                             </div>
                             <Services />
                             <div className='header'>
-                                <p>- Teklif Formu -</p>
+                                <p>Teklif Formu</p>
                             </div>
                             <div className='formDiv'>
                                 <div className='formImg'>
-
+                                    <img src="/Images/images2.jpg"/>
                                 </div>
                                 <Form />
                             </div>

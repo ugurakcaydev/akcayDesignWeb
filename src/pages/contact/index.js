@@ -7,6 +7,7 @@ import MapContainer from '@/Components/mapContainer/MapContainer'
 import Footer from '@/Components/Footer/Footer'
 import Form from '@/Components/Form/Form'
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import "../../app/globals.css"
 export default function Contact() {
     const [loading, setLoading] = useState(false)
 
@@ -36,7 +37,7 @@ export default function Contact() {
                     <main className='body'>
                         <BackToTopButton />
                         <Navbar />
-                        <div className='contactMain'>
+                        <div className='globalContainer'>
                             <div className='containerComm'>
                                 <div className='leftComm'>
                                     <div className='hedarContainer'>

@@ -62,3 +62,15 @@
     transition: all 1s ease;
     transform: translateX(5px);
 }
+
+@media screen and (max-width:470px) {
+    .containericons{
+        left:.5rem;
+        row-gap: 0 !important;
+    }
+    .svgDiv,.svgPDiv{
+        width: 30px;
+        height: 30px;
+     
+    }
+}

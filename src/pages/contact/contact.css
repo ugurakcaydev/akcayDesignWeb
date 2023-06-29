@@ -1,34 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap%27');
-
-.loadingScreeen {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #dad8d8;
-}
 
 .body {
     width: 100%;
-}
-
-.contactMain {
-    background-color: #dad8d8;
-    width: 100%;
-    margin-top: 105px;
-    padding: 2% 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
 }
 
 .containerComm {
     width: 100%;
     display: flex;
     justify-content: center;
-    column-gap: 5rem;
+    column-gap: 7%;
 }
 
 .leftComm,
@@ -70,14 +49,14 @@
     display: flex;
     justify-content: space-evenly;
     column-gap: 3rem;
-    padding: 5% 0;
+    padding: 5%;
 
 
 }
 
 .infoDiv {
     padding: 2rem;
-    background-image: linear-gradient(to right, #83c5be, #a2d8d5, #c1ebec, #e0feff);
+    background-image: linear-gradient(#888888, #AAAAAA, #CCCCCC, #EEEEEE);
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
@@ -87,7 +66,7 @@
     width: 400px;
     word-wrap: break-word;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    color: #fff;
+    color: #000;
     border-radius: 8px;
     transition: all .5s ease;
 }

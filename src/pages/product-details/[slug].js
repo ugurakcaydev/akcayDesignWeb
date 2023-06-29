@@ -5,6 +5,7 @@ import Navbar from '@/Components/Navbar/Navbar';
 import Link from 'next/link';
 import Form from '@/Components/Form/Form';
 import "./style.css"
+import "../../app/globals.css"
 import Footer from '@/Components/Footer/Footer';
 import BackToTopButton from '@/Components/BackToTopButton/BackToTopButton';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
@@ -105,9 +106,9 @@ export default function Page() {
                     <>
                         <BackToTopButton />
                         <Navbar />
-                        <div style={{ marginTop: "105px", padding: "2% 5%" }}>
-                            <div className='headerDetails'>
-                                - {decodedName} -
+                        <div className='globalContainer'>
+                            <div className='header'>
+                                {decodedName}
                             </div>
                             <div className='smallAndBigImageContainer'>
                                 {decodedImages !== null ? (
@@ -134,7 +135,7 @@ export default function Page() {
                                     //         ))
                                     //     }
                                     // </Swiper>
-                                    <div  className="scrollDiv">
+                                    <div className="scrollDiv">
                                         <div className='smallImageContainer'>
                                             {
                                                 decodedImages.map((image, index) => (

@@ -66,6 +66,9 @@
     font-size: 18px;
     border-radius: 50px;
 }
+.footerInput::placeholder{
+    font-size: 14px;
+}
 
 .footerInput:focus {
     outline: none;
@@ -128,7 +131,7 @@
     font-size: 12px;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:800px) {
 
     .commFooter {
         flex-direction: column;
@@ -154,8 +157,11 @@
 
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:470px) {
     .botFooter {
         font-size: 8px;
+    }
+    .footerPDiv {
+        font-size: 13px;
     }
 }

@@ -1,12 +1,11 @@
 .backToTop {
     position: fixed;
-    bottom: 2.2rem;
-    right: 2.2rem;
+    bottom: 2rem;
+    right: 2rem;
     opacity: 0;
     transition: opacity 0.3s ease;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 130px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +16,7 @@
     cursor: pointer;
     font-size: 16px;
     column-gap: .2rem;
+    padding: .8rem;
 }
 
 .backToTop svg {
@@ -25,6 +25,8 @@
 
 .backToTop:hover {
     cursor: pointer;
+    background-color: #fff;
+    transition: all .5s ease;
 }
 
 .backToTop.visible {

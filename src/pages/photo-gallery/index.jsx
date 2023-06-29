@@ -1,6 +1,7 @@
 import Navbar from '@/Components/Navbar/Navbar'
 import React, { useState, useEffect } from 'react'
 import "./style.css"
+import "../../app/globals.css"
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import Footer from '@/Components/Footer/Footer'
 
@@ -55,15 +56,14 @@ function index() {
                     :
                     <div>
                         <Navbar />
-                        <div className='photoContainer' style={{ marginTop: "105px", width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "3rem 0", backgroundColor: "#dad8d8" }}>
-                            <h1 className='header' style={{ letterSpacing: "5px" }}>- Fotoğraf Galerisi -</h1>
+                        <div className='globalContainer'>
+                            <h1 className='header'>Fotoğraf Galerisi</h1>
                             <div style={{ width: "100%", display: "flex", justifyContent: "center", padding: "3rem", maxWidth: "1500px", flexWrap: "wrap", gap: "3rem" }}>
                                 {
-                                    hizmetlerimiz.map((hizmet) => (
-                                        <div className='hizmetDiv'>
+                                    hizmetlerimiz.map((hizmet,index) => (
+                                        <div className='hizmetDiv' key={index}>
                                             {hizmet.name}
                                         </div>
-
                                     ))
                                 }
                             </div>

@@ -37,7 +37,7 @@ function Footer() {
                     </p>
                 </div>
                 <div ref={divRef} className={`footerInputDiv ${isVisible ? "visible" : ""}`} id="footerInputDiv">
-                    <input className='footerInput' />
+                    <input className='footerInput' placeholder="Lütfen e-posta adresinizi giriniz" />
                     <button>Kaydol</button>
                 </div>
                 <div className='commFooter'>
