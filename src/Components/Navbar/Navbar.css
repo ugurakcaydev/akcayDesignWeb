@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-evenly;
     
-    background: linear-gradient(to right, #463f3a, #333533, #202020);
+    background: #213555;
     color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -74,6 +74,7 @@
     position: relative;
     min-width: 200px;
     max-width: 300px;
+    
 }
 
 
@@ -94,7 +95,7 @@
     border-radius: 8px;
     padding: .5rem 2.5rem .5rem 1rem;
     position: relative;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     visibility: hidden;
     opacity: 0;
     transition: padding .5s ease-in, visibility 1s, opacity 1s;

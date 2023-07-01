@@ -5,11 +5,11 @@ import "./Services.css";
 function Services() {
     const services = [
         {
-            image: '/Images/images1.jpg',
+            image: '/Images/mobilya-üretim-montaj.jpg',
             title: 'Mobilya Üretim & Montaj'
         },
         {
-            image: '/Images/images1.jpg',
+            image: '/Images/floor-plan-design.jpg',
             title: 'Mimari Proje Çizimi'
         },
         {
@@ -21,7 +21,7 @@ function Services() {
             title: 'Tadilat Dekorasyon Mimarlık Hizmetleri'
         },
         {
-            image: '/Images/images1.jpg',
+            image: '/Images/3d-design.jpg',
             title: '3D Tasarım Mimari Çizimleri'
         },
         {

@@ -1,4 +1,3 @@
-
 .body {
     width: 100%;
 }
@@ -56,7 +55,7 @@
 
 .infoDiv {
     padding: 2rem;
-    background-image: linear-gradient(#888888, #AAAAAA, #CCCCCC, #EEEEEE);
+    background: linear-gradient(135deg,#1e375f, #e4efe9, #213b68);
     display: flex;
     flex-direction: column;
     row-gap: 2rem;

@@ -46,20 +46,20 @@ function Main() {
                         <Slider />
                         <div className="content">
                             <div className="header">
-                                Öne Çıkan Ürünlerimiz
+                                ÖNE ÇIKAN ÜRÜNLERİMİZ
                             </div>
                             <ContentProduct />
 
                             <div className='header'>
-                                <p>Hizmetlerimiz</p>
+                                <p>HİZMETLERİMİZ</p>
                             </div>
                             <Services />
                             <div className='header'>
-                                <p>Teklif Formu</p>
+                                <p>TEKLİF FORMU</p>
                             </div>
                             <div className='formDiv'>
                                 <div className='formImg'>
-                                    <img src="/Images/images2.jpg"/>
+                                    <img src="/Images/images2.jpg" />
                                 </div>
                                 <Form />
                             </div>
@@ -69,7 +69,7 @@ function Main() {
                             <div className="communication">
                                 <div className="leftCom">
                                     <h2>KAHVEYE BEKLİYORUZ</h2>
-                                    <p>Projelerimiz hakkında daha detaylı bilgi sahibi olmanız adına, sizi ofisimizde misafir etmekten mutluluk duyarız</p>
+                                    <p>Projelerimiz hakkında daha detaylı bilgi sahibi olmanız adına, sizi ofisimizde misafir etmekten mutluluk duyarız.</p>
                                 </div>
                                 <Link className='commLink' href="/contact">
                                     <button className="commButton">

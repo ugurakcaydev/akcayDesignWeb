@@ -1,6 +1,6 @@
 .backToTop {
     position: fixed;
-    bottom: 2rem;
+    bottom: 2.2rem;
     right: 2rem;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     font-family: 'Times New Roman', Times, serif;
-    background-color: aliceblue;
+    background-color: #213555;
     z-index: 9999;
     padding: .7rem .5rem;
     cursor: pointer;
@@ -21,11 +21,12 @@
 
 .backToTop svg {
     width: 25px;
+    color: #fff;
 }
 
 .backToTop:hover {
     cursor: pointer;
-    background-color: #fff;
+    background-color: #435f8d;
     transition: all .5s ease;
 }
 
