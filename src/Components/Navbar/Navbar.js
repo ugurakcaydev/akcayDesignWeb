@@ -7,6 +7,26 @@ function Navbar() {
 
     const [isInputActive, setInputActive] = useState(true);
     const [isMenuActive, setMenuActive] = useState(false);
+    const [isNavbarActive, setNavbarActive] = useState(false);
+
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY;
+        const triggerHeight = 5; // Navbar'ın renginin değişeceği scroll yüksekliği
+
+        if (scrollPosition > triggerHeight) {
+            setNavbarActive(true); // Örn: '#f0f0f0'
+        } else {
+            setNavbarActive(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
 
     useEffect(() => {
         const handleResize = () => {
@@ -26,7 +46,6 @@ function Navbar() {
 
     const handleInputClick = () => {
         if (window.innerWidth <= 1040) {
-            console.log("aaaa");
             setInputActive(true);
             return; // 1040 pikselin altında tıklamaya izin verme
         }
@@ -42,11 +61,11 @@ function Navbar() {
     return (
 
         <>
-            <div className="containerNav">
-                <div className="logo">
+            <div className={`containerNav ${isNavbarActive ? 'activeNav' : ''}`}>
+                <Link href="/" className="logo">
                     <img src="/Images/door.png" />
-                    Akçay Design
-                </div>
+                    <p>Akçay    <br/> Design</p>
+                </Link>
                 <div className={`navbarContent ${isMenuActive ? 'menuActive' : ''}`} style={{ position: isMenuActive ? "absolute" : "relative" }} >
                     <ul className="contentUl">
                         <li className="contentLi"><Link href="/">Anasayfa</Link></li>
@@ -62,7 +81,7 @@ function Navbar() {
                 </div>
                 <div className="hamburgerButton" >
                     <svg onClick={showMenu} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-3 h-3">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />aaaa
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                 </div>
 

@@ -3,21 +3,21 @@
 }
 
 .containerComm {
+    max-width: 1500px;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    column-gap: 7%;
+    justify-content: space-between;
+    column-gap: 5%;
+    
 }
 
 .leftComm,
 .rightComm {
-    width: 650px;
+    width:100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    max-width: 50%;
 }
 
 .leftComm {
@@ -34,7 +34,7 @@
     height: 100%;
 }
 
-.hedarContainer {
+.headerContainer {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -44,18 +44,18 @@
 }
 
 .informationContainer {
+    max-width: 1500px;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    column-gap: 3rem;
+    justify-content: space-between;
     padding: 5% 0;
-
+    column-gap: 3rem;
 
 }
 
 .infoDiv {
     padding: 2rem;
-    background: linear-gradient(135deg,#1e375f, #e4efe9, #213b68);
+    background: linear-gradient(135deg, #1e375f, #e4efe9, #213b68);
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
@@ -184,6 +184,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 2rem;
+    
     }
 
     .leftComm {

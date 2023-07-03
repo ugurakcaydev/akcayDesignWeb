@@ -36,11 +36,15 @@ const products = [
     },
 
 ];
+
+
 function ContentProduct() {
     return (
         <div className='productContainer'>
             {products.map((product, index) => (
-                <div className='outsideProduct' key={index}>
+                <div
+                   
+                    className='outsideProduct' key={index}>
                     <div className='productImage'>
                         {product.images.length > 0 ? (
                             <Link

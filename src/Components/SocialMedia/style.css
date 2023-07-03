@@ -1,7 +1,7 @@
 .containericons {
     position: fixed;
     z-index: 99;
-    bottom: 2rem;
+    bottom: 2.2rem;
     left: 2rem;
 }
 
@@ -16,7 +16,7 @@
     padding: 1.5rem;
     border-radius: 50%;
     transition: all .5s ease-in;
-    
+
 }
 
 .svgDiv {
@@ -65,13 +65,15 @@
 }
 
 @media screen and (max-width:470px) {
-    .containericons{
-        left:.5rem;
+    .containericons {
+        left: .1rem;
+        bottom: 0;
         row-gap: 0 !important;
     }
-    .svgDiv,.svgPDiv{
-        width: 30px;
+
+    .svgDiv,
+    .svgPDiv {
         height: 30px;
-     
+        font-size: 13px;
     }
 }

@@ -23,6 +23,7 @@
 .footerLogoDiv {
     width: 100%;
     border-radius: 50%;
+    
 }
 
 .footerLogoDiv img {
@@ -163,5 +164,8 @@
     }
     .footerPDiv {
         font-size: 13px;
+    }
+    .footerInput::placeholder{
+        font-size: 12px;
     }
 }

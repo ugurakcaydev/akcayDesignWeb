@@ -4,7 +4,8 @@ import "./style.css"
 import "../../app/globals.css"
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import Footer from '@/Components/Footer/Footer'
-
+import { motion } from 'framer-motion'
+import "../../app/globals.css"
 const hizmetlerimiz = [
     {
         name: "özel banyo"
@@ -23,55 +24,92 @@ const hizmetlerimiz = [
     },
     {
         name: "hazır banyo",
-    }
+    },
+    {
+        name: "hazır banyo",
+    }, {
+        name: "hazır banyo",
+    }, {
+        name: "hazır banyo",
+    }, {
+        name: "hazır banyo",
+    }, {
+        name: "hazır banyo",
+    }, {
+        name: "hazır banyo",
+    }, {
+        name: "hazır banyo",
+    }, {
+        name: "hazır banyo",
+    }, {
+        name: "hazır banyo",
+    }, {
+        name: "hazır banyo",
+    }, {
+        name: "hazır banyo",
+    }, {
+        name: "hazır banyo",
+    },
 ]
 
-
+const container = {
+    visible: {
+        transition: {
+            delayChildren: .3,
+            staggerChildren: 0.2
+        }
+    }
+}
+const item = {
+    hidden: {
+        opacity: 0,
+        translateY: 20
+    },
+    visible: {
+        opacity: 1,
+        translateY: 0
+    }
+}
 
 function index() {
 
-    const [loading, setLoading] = useState(false)
+    // const [loading, setLoading] = useState(false)
 
-    useEffect(() => {
-        setLoading(true)
-        setTimeout(() => {
-            setLoading(false)
-        }, 2000)
-    }, [])
+    // useEffect(() => {
+    //     setLoading(true)
+    //     setTimeout(() => {
+    //         setLoading(false)
+    //     }, 2000)
+    // }, [])
 
     return (
         <>
-            {
-                loading ?
-                    <div className="loadingScreeen">
-                        <ClimbingBoxLoader
-                            color={"#fff"}
-                            loading={loading}
-                            // cssOverride={override}
-                            size={20}
-                        // aria-label="Loading Spinner"
-                        // data-testid="loader"
-                        />
-                    </div>
-                    :
-                    <div>
-                        <Navbar />
-                        <div className='globalContainer'>
-                            <h1 className='header'>Fotoğraf Galerisi</h1>
-                            <div style={{ width: "100%", display: "flex", justifyContent: "center", padding: "3rem", maxWidth: "1500px", flexWrap: "wrap", gap: "3rem" }}>
-                                {
-                                    hizmetlerimiz.map((hizmet,index) => (
-                                        <div className='hizmetDiv' key={index}>
-                                            {hizmet.name}
-                                        </div>
-                                    ))
-                                }
-                            </div>
+            <Navbar />
+            <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={container}
+            >
 
-                        </div>
-                        <Footer />
+                <div className='globalContainer'>
+                    <h1 className='header'>Fotoğraf Galerisi</h1>
+                    <div className='cartContainer gap flex'>
+                        {
+                            hizmetlerimiz.map((hizmet, index) => (
+                                <motion.div
+                                    variants={item}
+                                    className='hizmetDiv' key={index}>
+                                    <img src='/Images/coffe3.jpg' />
+                                    <p className='hizmetName'>{hizmet.name}</p>
+                                </motion.div>
+                            ))
+                        }
                     </div>
-            }
+
+                </div>
+                <Footer />
+            </motion.div>
+
         </>
 
     )

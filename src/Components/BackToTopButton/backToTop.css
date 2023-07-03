@@ -1,6 +1,6 @@
 .backToTop {
     position: fixed;
-    bottom: 2.2rem;
+    bottom: 2.4rem;
     right: 2rem;
     opacity: 0;
     transition: opacity 0.3s ease;

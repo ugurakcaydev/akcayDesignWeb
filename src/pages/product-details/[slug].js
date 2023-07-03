@@ -11,6 +11,7 @@ import BackToTopButton from '@/Components/BackToTopButton/BackToTopButton';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, FreeMode, Pagination } from 'swiper';
+import { motion } from 'framer-motion';
 
 
 const products = [
@@ -59,16 +60,37 @@ const products = [
 ];
 
 
+const container = {
+    visible: {
+        transition: {
+            // delayChildren: .2,
+            staggerChildren: .2
+        }
+    }
+}
+const item = {
+    hidden: {
+        opacity: 0,
+        translateY: 20
+    },
+    visible: {
+        opacity: 1,
+        translateY: 0
+    }
+}
+
 export default function Page() {
 
-    const [loading, setLoading] = useState(false)
 
-    useEffect(() => {
-        setLoading(true)
-        setTimeout(() => {
-            setLoading(false)
-        }, 2000)
-    }, [])
+
+    // const [loading, setLoading] = useState(false)
+
+    // useEffect(() => {
+    //     setLoading(true)
+    //     setTimeout(() => {
+    //         setLoading(false)
+    //     }, 2000)
+    // }, [])
 
     const router = useRouter();
     const slug = router.query.slug
@@ -88,114 +110,121 @@ export default function Page() {
     }
 
     return (
-        <>
+        <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={container}
+
+        >
 
             {
-                loading ?
-                    <div className="loadingScreeen">
-                        <ClimbingBoxLoader
-                            color={"#fff"}
-                            loading={loading}
-                            // cssOverride={override}
-                            size={20}
-                        // aria-label="Loading Spinner"
-                        // data-testid="loader"
-                        />
-                    </div>
-                    :
-                    <>
-                        <BackToTopButton />
-                        <Navbar />
-                        <div className='globalContainer'>
-                            <div className='header'>
-                                {decodedName}
-                            </div>
-                            <div className='smallAndBigImageContainer'>
-                                {decodedImages !== null ? (
-                                    // <Swiper
-                                    //     direction={"vertical"}
-                                    //     pagination={{
-                                    //         clickable: true,
-                                    //     }}
-                                    //     freeMode={true}
-                                    //     mousewheel={true}
-                                    //     modules={[Mousewheel, FreeMode, Pagination]}
-                                    //     slidesPerView={5}
-                                    //     spaceBetween={30}
-                                    //     className="mySwiper"
-                                    // >
-                                    //     {
-                                    //         decodedImages.map((image, index) => (
-                                    //             <div key={index} >
-                                    //                 <SwiperSlide
-                                    //                     className={`img ${selectedImage === index ? 'selected' : ''}`}
-                                    //                     onClick={() => handleImageClick(index)}
-                                    //                 ><img src={image} /></SwiperSlide>
-                                    //             </div>
-                                    //         ))
-                                    //     }
-                                    // </Swiper>
-                                    <div className="scrollDiv">
-                                        <div className='smallImageContainer'>
-                                            {
-                                                decodedImages.map((image, index) => (
-                                                    <div key={index}
-                                                        className={`img ${selectedImage === index ? 'selected' : ''}`}
-                                                        onClick={() => handleImageClick(index)}
-                                                    >
-                                                        <img src={image} />
-                                                    </div>
-                                                ))
-                                            }
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <div>Fotoğraf Bekleniyor..</div>
-                                )}
-
-                                <div className='bigImageContainer'>
-                                    {decodedImages !== null && (
-                                        <img src={decodedImages[selectedImage]} />
-                                    )}
-                                </div>
-                            </div>
+                // loading ?
+                //     <div className="loadingScreeen">
+                //         <ClimbingBoxLoader
+                //             color={"#fff"}
+                //             loading={loading}
+                //             // cssOverride={override}
+                //             size={20}
+                //         // aria-label="Loading Spinner"
+                //         // data-testid="loader"
+                //         />
+                //     </div>
+                //     :
+                <>
+                    <BackToTopButton />
+                    <Navbar />
+                    <div className='globalContainer'>
+                        <div className='header'>
+                            {decodedName}
                         </div>
-                        <div className='explanation'>
-                            <div className='explanation-header'>
-                                <div onClick={() => handleExpClick(true)}
-                                    className={selectedExp ? 'selected' : ''}
-                                >Açıklama</div>
-                                <div onClick={() => handleExpClick(false)}
-                                    className={!selectedExp ? 'selected' : ''}
-                                >Sipariş Ver</div>
-                            </div>
-                            {selectedExp ? (
-                                <div className='explanation-content'>
-                                    {/* Açıklama içeriği buraya gelecek */}
-                                    {/* <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" ,rowGap:".5rem",padding:".5rem"}}> */}
-                                    <p>Tüm ürünlerimiz size özel olarak, sipariş üzerine üretilmektedir.</p>
-                                    <p>Ürünlerimiz kesinlikle demonte ve hazır kalıp ürünler değildir.
-                                    </p>
-                                    <p>Dilediğiniz ölçüde, renkte ve özellikte istediğiniz modeli üretebiliriz.
-                                    </p>
-                                    <p>İstanbul içi ücretsiz nakliye ve kurulum hizmetimiz mevcuttur.
-                                    </p>
-                                    <p>Detaylı bilgi için <Link className='link' href="/contact">İletişim sayfamızdan</Link> bizimle iletişime geçebileceğiniz gibi buraya tıklayarak WhatsApp üzerinden de iletişim kurabilirsiniz.
-                                    </p>
-                                    {/* </div> */}
+                        <div className='smallAndBigImageContainer'>
+                            {decodedImages !== null ? (
+                                // <Swiper
+                                //     direction={"vertical"}
+                                //     pagination={{
+                                //         clickable: true,
+                                //     }}
+                                //     freeMode={true}
+                                //     mousewheel={true}
+                                //     modules={[Mousewheel, FreeMode, Pagination]}
+                                //     slidesPerView={5}
+                                //     spaceBetween={30}
+                                //     className="mySwiper"
+                                // >
+                                //     {
+                                //         decodedImages.map((image, index) => (
+                                //             <div key={index} >
+                                //                 <SwiperSlide
+                                //                     className={`img ${selectedImage === index ? 'selected' : ''}`}
+                                //                     onClick={() => handleImageClick(index)}
+                                //                 ><img src={image} /></SwiperSlide>
+                                //             </div>
+                                //         ))
+                                //     }
+                                // </Swiper>
+                                <div className="scrollDiv">
+                                    <div className='smallImageContainer'>
+                                        {
+                                            decodedImages.map((image, index) => (
+                                                <motion.div
+                                                    variants={item}
+                                                    key={index}
+                                                    className={`img ${selectedImage === index ? 'selected' : ''}`}
+                                                    onClick={() => handleImageClick(index)}
+                                                >
+                                                    <img src={image} />
+                                                </motion.div>
+                                            ))
+                                        }
+                                    </div>
                                 </div>
                             ) : (
-                                <div className='order-content'>
-                                    {/* Sipariş içeriği buraya gelecek */}
-                                    <Form />
-                                </div>
+                                <div>Fotoğraf Bekleniyor..</div>
                             )}
+
+                            <div className='bigImageContainer'>
+                                {decodedImages !== null && (
+                                    <img src={decodedImages[selectedImage]} />
+                                )}
+                            </div>
                         </div>
-                        <Footer />
-                    </>
+                    </div>
+                    <div className='explanation'>
+                        <div className='explanation-header'>
+                            <div onClick={() => handleExpClick(true)}
+                                className={selectedExp ? 'selected' : ''}
+                            >Açıklama</div>
+                            <div onClick={() => handleExpClick(false)}
+                                className={!selectedExp ? 'selected' : ''}
+                            >Sipariş Ver</div>
+                        </div>
+                        {selectedExp ? (
+                            <div className='explanation-content'>
+                                {/* Açıklama içeriği buraya gelecek */}
+                                {/* <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" ,rowGap:".5rem",padding:".5rem"}}> */}
+                                <p>Tüm ürünlerimiz size özel olarak, sipariş üzerine üretilmektedir.</p>
+                                <p>Ürünlerimiz kesinlikle demonte ve hazır kalıp ürünler değildir.
+                                </p>
+                                <p>Dilediğiniz ölçüde, renkte ve özellikte istediğiniz modeli üretebiliriz.
+                                </p>
+                                <p>İstanbul içi ücretsiz nakliye ve kurulum hizmetimiz mevcuttur.
+                                </p>
+                                <p>Detaylı bilgi için <Link className='link' href="/contact">İletişim sayfamızdan</Link> bizimle iletişime geçebileceğiniz gibi buraya tıklayarak WhatsApp üzerinden de iletişim kurabilirsiniz.
+                                </p>
+                                {/* </div> */}
+                            </div>
+                        ) : (
+                            <div className='order-content'>
+                                {/* Sipariş içeriği buraya gelecek */}
+                                <Form />
+                            </div>
+                        )}
+                    </div>
+                    <Footer />
+                </>
             }
 
-        </>
+        </motion.div>
     );
 
 }

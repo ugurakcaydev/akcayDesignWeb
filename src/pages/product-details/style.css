@@ -1,7 +1,6 @@
 .smallAndBigImageContainer {
     display: flex;
-    border-bottom: 2px solid black;
-    border-top: 2px solid black;
+
     padding: .5rem;
     width: 100%;
     position: relative;
@@ -22,12 +21,12 @@
     overflow-y: scroll;
     overflow-x: hidden;
     row-gap: 2rem;
-
 }
 
 .smallImageContainer::-webkit-scrollbar {
     width: 5px;
     background-color: #fff;
+    border-radius: 20px;
 
 }
 
@@ -98,6 +97,7 @@
     align-items: center;
     row-gap: 2rem;
     position: relative;
+
 
 }
 
@@ -228,14 +228,14 @@ textarea {
 
     .smallImageContainer::-webkit-scrollbar {
         width: 100%;
-        height: 0.5rem;
+        height: 0.3rem;
         background-color: #fff;
 
     }
 
     .smallImageContainer::-webkit-scrollbar-thumb {
-        background-color: grey;
-        border-radius: 5rem;
+        background-color: #000;
+        border-radius: 20px;
 
     }
 
@@ -292,18 +292,7 @@ textarea {
         overflow-x: scroll;
     }
 
-    .smallImageContainer::-webkit-scrollbar {
-        width: 100%;
-        height: 0.5rem;
-        background-color: #fff;
-
-    }
-
-    .smallImageContainer::-webkit-scrollbar-thumb {
-        background-color: grey;
-        border-radius: 5rem;
-
-    }
+    
 
     .bigImageContainer {
         max-height: 500px;
