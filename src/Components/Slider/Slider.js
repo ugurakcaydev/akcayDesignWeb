@@ -1,5 +1,5 @@
 "use client"
-import {Autoplay, Pagination,Keyboard } from "swiper";
+import { Autoplay, Pagination, Keyboard } from "swiper";
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -29,8 +29,8 @@ export default function App() {
                     pagination={{
                         clickable: true,
                     }}
-                   
-                    modules={[Pagination,Keyboard,Autoplay]}
+
+                    modules={[Pagination, Keyboard, Autoplay]}
                     className="mySwiper"
                 >
                     <SwiperSlide><img src="/Images/images1.jpg" loading="lazy" /></SwiperSlide>

@@ -92,7 +92,7 @@ function index() {
             >
 
                 <div className='globalContainer'>
-                    <h1 className='header'>Fotoğraf Galerisi</h1>
+                    <h1 className='header'>FOTOĞRAF GALERİSİ</h1>
                     <div className='cartContainer gap flex'>
                         {
                             hizmetlerimiz.map((hizmet, index) => (
