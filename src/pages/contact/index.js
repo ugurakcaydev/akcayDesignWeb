@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react'
 import Navbar from '@/Components/Navbar/Navbar'
 import "./contact.css"
 import BackToTopButton from '@/Components/BackToTopButton/BackToTopButton'
-import MapContainer from '@/Components/mapContainer/MapContainer'
 import Footer from '@/Components/Footer/Footer'
 import Form from '@/Components/Form/Form'
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
