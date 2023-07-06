@@ -72,7 +72,7 @@ function Navbar() {
                         <li className="contentLi"><Link href="/photo-gallery">Fotoğraf Galerimiz</Link></li>
                         <li className="contentLi"><a href="">Hakkımızda</a></li>
                         <li className="contentLi"><Link href="/contact">İletişim</Link></li>
-                        <li className="contentLi"><a>Teklif Ver</a></li>
+                        <li className="contentLi"><a href="">Teklif Ver</a></li>
                     </ul>
                 </div>
                 <div className="searchDiv">

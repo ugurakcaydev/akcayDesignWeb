@@ -11,6 +11,7 @@ import BackToTopButton from '@/Components/BackToTopButton/BackToTopButton';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, FreeMode, Pagination } from 'swiper';
+import SocialMedia from "@/Components/SocialMedia/index"
 import { motion } from 'framer-motion';
 
 
@@ -131,6 +132,7 @@ export default function Page() {
                 //     </div>
                 //     :
                 <>
+                    <SocialMedia/>
                     <BackToTopButton />
                     <Navbar />
                     <div className='globalContainer'>

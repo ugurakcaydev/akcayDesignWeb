@@ -31,7 +31,7 @@ function Form() {
                         value={firstName}
                         onChange={handleInputChange}
                     />
-                    <label className={`lastNameLabel ${firstName.length > 0 ? 'activeLabel' : ''}`}>First name</label>
+                    <label className={`lastNameLabel ${firstName.length > 0 ? 'activeLabel' : ''}`}>Ad</label>
                 </div>
                 <div className='lastNameDiv'>
                     <input
@@ -40,7 +40,7 @@ function Form() {
                         onChange={handleInputChange}
                     />
                     <label className={`lastNameLabel ${lastName.length > 0 ? 'activeLabel' : ''}`}>
-                        Last name
+                        Soyad
                     </label>
                 </div>
             </div>
@@ -60,13 +60,13 @@ function Form() {
                     value={phone}
                     onChange={handleInputChange}
                 />
-                <label className={`phoneLabel ${phone.length > 0 ? 'activeLabel' : ''}`}>Phone Number(+90)</label>
+                <label className={`phoneLabel ${phone.length > 0 ? 'activeLabel' : ''}`}>Telefon(+90)</label>
 
             </div>
             <textarea className='messageDiv' placeholder='Mesaj'>
             </textarea>
 
-            <button className='messageButton'>Send Message</button>
+            <button className='messageButton'>Formu Gönder</button>
         </div>
     )
 }

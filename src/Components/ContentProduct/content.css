@@ -92,7 +92,7 @@
     overflow: hidden;
     /* background-image: linear-gradient(to right, #463f3a, #333533, #202020); */
     z-index: 1;
-    background-color: #213555;
+    background-color: #3f4550;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     cursor: pointer;
@@ -114,7 +114,7 @@
     width: 100%;
     height: 0%;
     /* background-image: linear-gradient(to right, #202020, #333533, #463f3a); */
-    background-color: #9BABB8;
+    background-color: #cccfd3;
     transition: 1s;
     z-index: -1;
 }

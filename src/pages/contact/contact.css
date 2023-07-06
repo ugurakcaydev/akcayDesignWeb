@@ -38,7 +38,7 @@
     display: flex;
     width: 100%;
     flex-direction: column;
-    align-items: self-start;
+    align-items: center;
     justify-content: center;
     row-gap: 1rem;
 }
@@ -55,7 +55,7 @@
 
 .infoDiv {
     padding: 2rem;
-    background: linear-gradient(135deg, #1e375f, #e4efe9, #213b68);
+    background: linear-gradient(135deg, #ffff, #376b72, #444040);
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
@@ -65,7 +65,7 @@
     width: 400px;
     word-wrap: break-word;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    color: #000;
+    color: #fff;
     border-radius: 8px;
     transition: all .5s ease;
 }

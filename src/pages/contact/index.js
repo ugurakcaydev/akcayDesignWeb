@@ -8,6 +8,7 @@ import Form from '@/Components/Form/Form'
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import "../../app/globals.css"
 import { setCookie, getCookie } from "../../Cookies/cookieUtils"
+import SocialMedia from "@/Components/SocialMedia/index"
 import { motion } from 'framer-motion'
 export default function Contact() {
 
@@ -45,14 +46,15 @@ export default function Contact() {
                 //     :
                 <div
                     className='body'>
+                    <SocialMedia/>
                     <BackToTopButton />
                     <Navbar />
                     <div className='globalContainer'>
                         <div className='containerComm'>
                             <div className='leftComm'>
                                 <div className='headerContainer'>
-                                    <h1>Contact us</h1>
-                                    <p>Our Friendly team woul love to hear from you</p>
+                                    <h1>İletişim</h1>
+                                    <p>Sizinle görüşmekten mutluluk duyarız. İsteklerinizi bizimle paylaşın</p>
                                 </div>
                                 <Form />
                             </div>
@@ -89,7 +91,7 @@ export default function Contact() {
                                 </div>
                                 <div className='infoPDiv '>
                                     <h3>Ofise de Bekleriz</h3>
-                                    <p className='firstP' >Ofisimizi Ziyaret Edebilirsiniz</p>
+                                    <p className='firstP' >Ofisimizi ziyaret edebilirsiniz</p>
                                     <p className='secondP'>Altınşehir mahallesi/Doğanevler Caddesi </p>
                                 </div>
                             </div>
@@ -101,7 +103,7 @@ export default function Contact() {
 
                                 </div>
                                 <div className='infoPDiv'>
-                                    <h3>Chat to Sales</h3>
+                                    <h3>E-Mail </h3>
                                     <p className='firstP'>En kısa sürede döneceğiz</p>
                                     <p className='secondP'>info@akcaymimarlik.com</p>
                                 </div>

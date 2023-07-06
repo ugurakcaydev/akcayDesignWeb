@@ -20,15 +20,15 @@
     z-index: 9;
     transition: all .5s ease;
     /* backdrop-filter: blur(5px); */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    background-color: rgba(0,0,0,0.8);
+    box-shadow: 0 0 10px rgba(214, 197, 197, 0.5);
+    background-color: rgba(122, 117, 117, 0.8);
 }
 
 .containerNav a {
     font-size: 15px;
     font-weight: bold;
     padding: .5rem;
-    color: #eeeeee;
+    color: #fff;
     text-decoration: none;
     cursor: pointer;
     transition: all 2s ease;
@@ -36,10 +36,11 @@
 
 .containerNav a:hover{
    color: #fff;
+   transition: all .8s ease;
 }
 
 .activeNav {
-    background-color: #213555;
+    background-color: #3f4550;
     transition: all .5s ease;
 }
 
@@ -193,7 +194,7 @@
         position: absolute !important;
         top: 6.5rem;
         right: 0;
-        background-color: rgb(89, 115, 103, .5);
+        background-color: rgba(0, 0, 0, 0.6);
         /* opacity: 1; */
         z-index: 9;
     }

@@ -2,7 +2,7 @@
     position: fixed;
     z-index: 99;
     bottom: 2.2rem;
-    left: 2rem;
+    left: 1rem;
 }
 
 .svgPDiv {
@@ -55,7 +55,7 @@
     border-radius: 20px;
     transition: all 1s ease;
     justify-content: space-evenly;
-    background-color: #213555;
+    background-color: #3f4550;
 }
 
 .svgPDiv:hover .pDiv {
