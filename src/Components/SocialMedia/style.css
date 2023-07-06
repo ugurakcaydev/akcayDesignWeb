@@ -47,7 +47,6 @@
     opacity: 0;
     margin-left: 2.5rem;
     transition: all 1s ease;
-    color: #fff;
 }
 
 .svgPDiv:hover {
@@ -62,6 +61,10 @@
     opacity: 1;
     transition: all 1s ease;
     transform: translateX(5px);
+}
+ a{
+    text-decoration: none;
+    color: #fff;
 }
 
 @media screen and (max-width:470px) {
