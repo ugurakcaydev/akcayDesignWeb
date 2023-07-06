@@ -9,23 +9,23 @@ function Services() {
             title: 'Mobilya Üretim & Montaj'
         },
         {
-            image: '/Images/floor-plan-design.jpg',
+            image: '/Images/Mimari Proje Çizimi.jpg',
             title: 'Mimari Proje Çizimi'
         },
         {
-            image: '/Images/images1.jpg',
+            image: '/Images/Mimari Dekorasyon Hizmetleri.jpg',
             title: 'Mimari Dekorasyon Hizmetleri'
         },
         {
-            image: '/Images/images1.jpg',
+            image: '/Images/Tadilat Dekorasyon Mimarlık Hizmetleri.jpg',
             title: 'Tadilat Dekorasyon Mimarlık Hizmetleri'
         },
         {
-            image: '/Images/3d-design.jpg',
+            image: '/Images/3D Tasarım Mimari Çizimleri.jpg',
             title: '3D Tasarım Mimari Çizimleri'
         },
         {
-            image: '/Images/images1.jpg',
+            image: '/Images/Dış Cephe Bina Tasarımları.webp',
             title: 'Dış Cephe Bina Tasarımları'
         },
         {
