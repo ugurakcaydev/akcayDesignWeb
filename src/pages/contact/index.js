@@ -53,7 +53,7 @@ export default function Contact() {
                         <div className='containerComm'>
                             <div className='leftComm'>
                                 <div className='headerContainer'>
-                                    <h1>İletişim</h1>
+                                    <h1>İLETİŞİM</h1>
                                     <p>Sizinle görüşmekten mutluluk duyarız. İsteklerinizi bizimle paylaşın</p>
                                 </div>
                                 <Form />

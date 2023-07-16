@@ -94,15 +94,18 @@ textarea::placeholder {
     padding: .8rem;
     border-radius: 6px;
     outline: none;
-    border: 2px outset #ccc;
+    border: 1px solid #999;
     color: #fff;
-    background: #376b72;
+    background: #999;
     cursor: pointer;
+    transition: all 1s ease;
 
 }
 
 .messageButton:hover {
-    opacity: .92;
+    transition: all 1s ease;
+    box-shadow: inset 3px 4px 4px rgba(0, 0, 0, .55);
+    background-color: #338822;
 }
 
 

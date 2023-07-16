@@ -1,9 +1,10 @@
 import "./Navbar.css"
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
 
-function Navbar() {
+const Navbar = ({ title = "Akcay Design" }) => {
 
     const [isInputActive, setInputActive] = useState(true);
     const [isMenuActive, setMenuActive] = useState(false);
@@ -63,16 +64,22 @@ function Navbar() {
         <>
             <div className={`containerNav ${isNavbarActive ? 'activeNav' : ''}`}>
                 <Link href="/" className="logo">
-                    <img src="/Images/door.png" />
-                    <p>Akçay    <br/> Design</p>
+                    <Image
+                        src="/Images/door.png"
+                        height={40}
+                        width={40}
+                        priority={true}
+                        alt="Picture of the navbar"
+                    />
+                    <p>Akçay <br /> Design</p>
                 </Link>
                 <div className={`navbarContent ${isMenuActive ? 'menuActive' : ''}`} style={{ position: isMenuActive ? "absolute" : "relative" }} >
                     <ul className="contentUl">
                         <li className="contentLi"><Link href="/">Anasayfa</Link></li>
                         <li className="contentLi"><Link href="/photo-gallery">Fotoğraf Galerimiz</Link></li>
-                        <li className="contentLi"><a href="">Hakkımızda</a></li>
+                        {/* <li className="contentLi"><a href="">Hakkımızda</a></li> */}
                         <li className="contentLi"><Link href="/contact">İletişim</Link></li>
-                        <li className="contentLi"><a href="">Teklif Ver</a></li>
+                        {/* <li className="contentLi"><a href="">Teklif Ver</a></li> */}
                     </ul>
                 </div>
                 <div className="searchDiv">

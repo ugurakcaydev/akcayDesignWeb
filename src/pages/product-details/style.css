@@ -1,10 +1,32 @@
+.headerAndSlugContainer{
+    width: 100%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5rem;
+    row-gap: 2.5rem;
+}
+
+
+.headerSlug {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
 .smallAndBigImageContainer {
     display: flex;
     border: 1px solid #000;
     padding: .5rem;
     width: 100%;
     position: relative;
-    height: 75vh;
+    height: 70vh;
 }
 
 .scrollDiv {
@@ -48,10 +70,11 @@
     padding: .5rem 0;
 } */
 
-.img {
+.smallImages {
     width: 100%;
     height: 90px;
     cursor: pointer;
+   
 
 }
 
@@ -62,11 +85,11 @@
     justify-content: center;
 } */
 
-.img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+/* .smallImages img {
+      width: 100%;
+    height: 100%;  
+     object-fit: cover; 
+} */
 
 .smallImageContainer>div.selected {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -79,12 +102,12 @@
 
 }
 
-.bigImageContainer img {
+/* .bigImageContainer img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     padding: 1rem;
-}
+} */
 
 
 
@@ -208,13 +231,14 @@ textarea {
 
     }
 
-    .smallImageContainer .img {
+    .smallImageContainer .smallImages {
         width: 100%;
         height: 100%;
     }
 
-    .smallImageContainer .img>img {
-        width: 80px;
+    .smallImageContainer .smallImages>img {
+        width: 80px !important;
+        height: 100% !important;
 
 
     }
@@ -274,12 +298,12 @@ textarea {
 
     }
 
-    .smallImageContainer .img {
+    .smallImageContainer .smallImages {
         width: 100%;
         height: 100%;
     }
 
-    .smallImageContainer .img>img {
+    .smallImageContainer .smallImages>img {
         width: 80px;
 
 
@@ -292,7 +316,7 @@ textarea {
         overflow-x: scroll;
     }
 
-    
+
 
     .bigImageContainer {
         max-height: 500px;

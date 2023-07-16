@@ -6,6 +6,7 @@ import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import Footer from '@/Components/Footer/Footer'
 import { motion } from 'framer-motion'
 import "../../app/globals.css"
+import Image from 'next/image';
 const hizmetlerimiz = [
     {
         name: "özel banyo"
@@ -92,18 +93,28 @@ function index() {
             >
 
                 <div className='globalContainer'>
-                    <h1 className='header'>FOTOĞRAF GALERİSİ</h1>
-                    <div className='cartContainer gap flex'>
-                        {
-                            hizmetlerimiz.map((hizmet, index) => (
-                                <motion.div
-                                    variants={item}
-                                    className='hizmetDiv' key={index}>
-                                    <img src='/Images/coffe3.jpg' />
-                                    <p className='hizmetName'>{hizmet.name}</p>
-                                </motion.div>
-                            ))
-                        }
+                    <div className='headerAndImageContainer'>
+                        <h1 className='header'>FOTOĞRAF GALERİSİ</h1>
+                        <div className='cartContainer gap flex'>
+                            {
+                                hizmetlerimiz.map((hizmet, index) => (
+                                    <motion.div
+                                        variants={item}
+                                        className='hizmetDiv' key={index}>
+                                        <Image
+                                            width={400}
+                                            height={260}
+                                            src='/Images/coffe3.jpg'
+                                            alt='Picture of the gallery'
+                                            loading='lazy'
+                                            style={{borderRadius:"8px",zIndex:1}}
+                                        />
+
+                                        <p className='hizmetName'>{hizmet.name}</p>
+                                    </motion.div>
+                                ))
+                            }
+                        </div>
                     </div>
 
                 </div>

@@ -8,53 +8,51 @@ import "./style.css"
 import "../../app/globals.css"
 import Footer from '@/Components/Footer/Footer';
 import BackToTopButton from '@/Components/BackToTopButton/BackToTopButton';
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel, FreeMode, Pagination } from 'swiper';
 import SocialMedia from "@/Components/SocialMedia/index"
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 
 const products = [
     {
         name: 'Çocuk ve Genç Odası Tasarımlarımız',
-        images: [], /*['/Images/youngroom1.jpg', /* '/Images/youngroom2.jpg']*/
+        images: [""], /*['/Images/youngroom1.jpg', /* '/Images/youngroom2.jpg']*/
         slug: "cocuk-ve-genç-odası-tasarımlarımız"
     },
     {
         name: 'Mutfak Tasarımlarımız',
-        images: ["/Images/kitchen3.jpg", '/Images/kitchen1.jpg', '/Images/kitchen2.jpg', '/Images/kitchen4.jpg', "/Images/images1.jpg", "/Images/images1.jpg", "/Images/images1.jpg"], /*[/*'/Images/kitchen1.jpg', '/Images/kitchen2.jpg', '/Images/kitchen3.jpg', '/Images/kitchen4.jpg']*/
+        images: ["/Images/mutfakTasarımlarımız.jpg", '/Images/kitchen1.jpg', '/Images/kitchen2.jpg', '/Images/kitchen4.jpg', "/Images/images1.jpg", "/Images/images1.jpg", "/Images/images1.jpg"], /*[/*'/Images/kitchen1.jpg', '/Images/kitchen2.jpg', '/Images/kitchen3.jpg', '/Images/kitchen4.jpg']*/
         slug: "mutfak-tasarımlarımız"
     },
     {
         name: 'Yemek Masası Tasarımlarımız',
-        images: [], //'/Images/dinnertable1.jpg' /*['/Images/dinnertable1.jpg']*/
+        images: [""], //'/Images/dinnertable1.jpg' /*['/Images/dinnertable1.jpg']*/
         slug: "yemek-masası-tasarımlarımız"
     },
     {
         name: 'Yatak Odası Tasarımlarımız',
-        images: [],//'/Images/bedroom2.jpg' /*['/Images/bedroom1.jpg', '/Images/bedroom2.jpg', '/Images/bedroom3.jpg']*/
+        images: [""],//'/Images/bedroom2.jpg' /*['/Images/bedroom1.jpg', '/Images/bedroom2.jpg', '/Images/bedroom3.jpg']*/
         slug: "yatak-odası-tasarımlarımız"
     },
     {
         name: 'Gardırop Tasarımlarımız',
-        images: [],//'/Images/gardırop1.jpg',
+        images: [""],//'/Images/gardırop1.jpg',
         slug: "gardırop-tasarımlarımız"
     },
     {
         name: 'Portmanto Tasarımlarımız',
-        images: [],//'/Images/drawr1.jpg',
+        images: [""],//'/Images/drawr1.jpg',
         slug: "portmanto-tasarımlarımız"
 
     },
     {
         name: 'Banyo Tasarımlarımız',
-        images: [],
+        images: [""],
         slug: "banyo-tasarımlarımız"
     },
     {
         name: 'Banyo Tasarımlarımız',
-        images: [],
+        images: [""],
         slug: "banyo-tasarımlarımız"
     },
 
@@ -82,17 +80,6 @@ const item = {
 
 export default function Page() {
 
-
-
-    // const [loading, setLoading] = useState(false)
-
-    // useEffect(() => {
-    //     setLoading(true)
-    //     setTimeout(() => {
-    //         setLoading(false)
-    //     }, 2000)
-    // }, [])
-
     const router = useRouter();
     const slug = router.query.slug
 
@@ -115,79 +102,58 @@ export default function Page() {
             initial="hidden"
             animate="visible"
             variants={container}
-
         >
-
             {
-                // loading ?
-                //     <div className="loadingScreeen">
-                //         <ClimbingBoxLoader
-                //             color={"#fff"}
-                //             loading={loading}
-                //             // cssOverride={override}
-                //             size={20}
-                //         // aria-label="Loading Spinner"
-                //         // data-testid="loader"
-                //         />
-                //     </div>
-                //     :
                 <>
-                    <SocialMedia/>
+                    <SocialMedia />
                     <BackToTopButton />
                     <Navbar />
                     <div className='globalContainer'>
-                        <div className='header'>
-                            {decodedName}
-                        </div>
-                        <div className='smallAndBigImageContainer'>
-                            {decodedImages !== null ? (
-                                // <Swiper
-                                //     direction={"vertical"}
-                                //     pagination={{
-                                //         clickable: true,
-                                //     }}
-                                //     freeMode={true}
-                                //     mousewheel={true}
-                                //     modules={[Mousewheel, FreeMode, Pagination]}
-                                //     slidesPerView={5}
-                                //     spaceBetween={30}
-                                //     className="mySwiper"
-                                // >
-                                //     {
-                                //         decodedImages.map((image, index) => (
-                                //             <div key={index} >
-                                //                 <SwiperSlide
-                                //                     className={`img ${selectedImage === index ? 'selected' : ''}`}
-                                //                     onClick={() => handleImageClick(index)}
-                                //                 ><img src={image} /></SwiperSlide>
-                                //             </div>
-                                //         ))
-                                //     }
-                                // </Swiper>
-                                <div className="scrollDiv">
-                                    <div className='smallImageContainer'>
-                                        {
-                                            decodedImages.map((image, index) => (
-                                                <motion.div
-                                                    variants={item}
-                                                    key={index}
-                                                    className={`img ${selectedImage === index ? 'selected' : ''}`}
-                                                    onClick={() => handleImageClick(index)}
-                                                >
-                                                    <img src={image} />
-                                                </motion.div>
-                                            ))
-                                        }
+                        <div className='headerAndSlugContainer'>
+                            <div className='headerSlug'>
+                                {decodedName}
+                            </div>
+                            <div className='smallAndBigImageContainer'>
+                                {decodedImages !== null ? (
+                                    <div className="scrollDiv">
+                                        <div className='smallImageContainer'>
+                                            {
+                                                decodedImages.map((image, index) => (
+                                                    <motion.div
+                                                        variants={item}
+                                                        key={index}
+                                                        className={`smallImages ${selectedImage === index ? 'selected' : ''}`}
+                                                        onClick={() => handleImageClick(index)}
+                                                    >
+                                                        <Image
+                                                            // fill
+                                                            // sizes='100vw'
+                                                            width={0}
+                                                            height={0}
+                                                            sizes="100vw"
+                                                            style={{ width: '100%', height: '90px', objectFit: "cover" }}
+                                                            alt='Picture of the smallSlug'
+                                                            src={image} />
+                                                    </motion.div>
+                                                ))
+                                            }
+                                        </div>
                                     </div>
-                                </div>
-                            ) : (
-                                <div>Fotoğraf Bekleniyor..</div>
-                            )}
-
-                            <div className='bigImageContainer'>
-                                {decodedImages !== null && (
-                                    <img src={decodedImages[selectedImage]} />
+                                ) : (
+                                    <div>Fotoğraf Bekleniyor..</div>
                                 )}
+                                <div className='bigImageContainer'>
+                                    {decodedImages !== null && (
+                                        <Image
+                                            src={decodedImages[selectedImage]}
+                                            width={0}
+                                            height={0}
+                                            sizes="100vw"
+                                            style={{ width: '100%', height: '100%', objectFit: "contain",padding:"1rem" }}
+                                            alt='Picture of the bigSlug'
+                                        />
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -202,8 +168,6 @@ export default function Page() {
                         </div>
                         {selectedExp ? (
                             <div className='explanation-content'>
-                                {/* Açıklama içeriği buraya gelecek */}
-                                {/* <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" ,rowGap:".5rem",padding:".5rem"}}> */}
                                 <p>Tüm ürünlerimiz size özel olarak, sipariş üzerine üretilmektedir.</p>
                                 <p>Ürünlerimiz kesinlikle demonte ve hazır kalıp ürünler değildir.
                                 </p>
@@ -213,7 +177,6 @@ export default function Page() {
                                 </p>
                                 <p>Detaylı bilgi için <Link className='link' href="/contact">İletişim sayfamızdan</Link> bizimle iletişime geçebileceğiniz gibi buraya tıklayarak WhatsApp üzerinden de iletişim kurabilirsiniz.
                                 </p>
-                                {/* </div> */}
                             </div>
                         ) : (
                             <div className='order-content'>
@@ -225,7 +188,6 @@ export default function Page() {
                     <Footer />
                 </>
             }
-
         </motion.div>
     );
 

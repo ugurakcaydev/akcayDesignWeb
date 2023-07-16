@@ -24,7 +24,7 @@ function index() {
                     </div>
                 </div>
             </a>
-            <a href="mailto:info@akcaymimarlik.com">
+            <a href="https://mail.google.com/mail/?view=cm&to=info@akcaymimarlik.com" target='_blank'>
                 <div className='svgPDiv'>
                     <div className='svgDiv'>
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 64 64">

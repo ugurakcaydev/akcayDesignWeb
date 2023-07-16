@@ -24,7 +24,8 @@ const BackToTopButton = () => {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' // Pürüzsüz bir kaydırma efekti için 'smooth' kullanabilirsiniz
+            behavior: 'smooth',
+            // Pürüzsüz bir kaydırma efekti için 'smooth' kullanabilirsiniz
         });
     };
 

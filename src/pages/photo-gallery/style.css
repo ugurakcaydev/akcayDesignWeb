@@ -9,6 +9,14 @@
     max-width: 1500px;
 }
 
+.headerAndImageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5rem;
+    row-gap: 2.5rem;
+}
+
 
 .hizmetDiv {
 
@@ -26,14 +34,6 @@
     position: relative;
     border-radius: 8px;
 }
-
-.hizmetDiv img {
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    border-radius: 8px;
-}
-
 .hizmetName {
     width: 100%;
     position: absolute;
@@ -49,6 +49,8 @@
     transition: all .5s ease;
 }
 
+
+
 @media screen and (max-width:1040px) {
     .hizmetDiv {
         width: 250px;
@@ -60,17 +62,20 @@
     .hizmetDiv {
         width: 200px;
     }
-    .cartContainer{
+
+    .cartContainer {
         gap: 1.5rem;
         padding: 0;
     }
 
 }
+
 @media screen and (max-width:470px) {
     .hizmetDiv {
         width: 150px;
     }
-    .hizmetName{
+
+    .hizmetName {
         font-size: 15px;
     }
 

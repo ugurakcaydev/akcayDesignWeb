@@ -1,4 +1,4 @@
-.servicesContainer {
+/* .servicesContainer {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@
     height: 250px;
     position: relative;
     perspective: 1000px;
-    /* 3D perspektifi ayarlayın */
+    /* 3D perspektifi ayarlayın 
     transition: transform .5s ease-in-out;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
@@ -45,11 +45,7 @@
     min-height: 60px;
 }
 
-/* .flip {
-    transform-style: preserve-3d;
-    /* 3D dönüş stilini koruyun 
-    transform: rotateX(360deg);
-} */
+
 
 @media screen and (max-width:1040px) {
     .imagesServices {
@@ -75,4 +71,4 @@
     .servicesContainer {
         padding: 0;
     }
-}
+} */

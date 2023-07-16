@@ -1,4 +1,4 @@
-
+import Image from 'next/image'
 import "./footer.css"
 import React, { useEffect, useRef, useState } from 'react';
 function Footer() {
@@ -28,7 +28,13 @@ function Footer() {
         <div className='footer'>
             <div className='topFooter'>
                 <div className='footerLogoDiv'>
-                    <img src="/Images/logo.png"/>
+                    <Image
+                        src="/Images/logo.png"
+                        width={200}
+                        height={200}
+                        style={{ objectFit: "cover" }}
+                        alt='Picture of the footer'
+                    />
                 </div>
                 <div className='footerPDiv'>
                     <p>
