@@ -14,6 +14,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import PropagateLoader from "react-spinners/PropagateLoader";
 import Image from 'next/image'
+import Head from 'next/head';
 const products = [
     {
         name: 'Çocuk ve Genç Odası Tasarımlarımız',
@@ -111,10 +112,41 @@ function Main() {
             /></div>;
     } else {
         return (
-            <>
+            <div lang='tr'>
+                <Head>
+                    <meta charSet="UTF-8" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                    <meta name="description" content="Mobilya dekorasyonu, iç mimarlık ve tasarım hizmetleri sunan profesyonel firma. İç mekanlarınızı yeniden tasarlıyoruz." />
+                    <meta name="keywords" content="mobilya,
+                    dekorasyon,
+                    iç mimarlık,
+                    tasarım,
+                    iç mekan,
+                    mobilya tasarımı,
+                    ev dekorasyonu,
+                    iç mekan tasarımı,
+                    çocuk ve genç odası,tasarımları,
+                    gardırop tasarımları,
+                    portmanto tasarımları,
+                    banyo tasarımları,
+                    yatak odası tasarımları,
+                    yemek masası tasarımları,
+                    mutfak tasarımları,
+                    mobilya montaj,
+                    mimari proje çizimi,
+                    tadilat dekorasyon
+                    " />
+                    <link
+                        href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+                        rel="stylesheet"
+                    />
+                    <title>AkcayDesign</title>
+                </Head>
+
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
+
                 >
                     <SocialMedia />
                     <BackToTopButton />
@@ -212,7 +244,7 @@ function Main() {
                             width={0}
                             height={0}
                             sizes="100vw"
-                           
+
                             style={{ width: '100%', height: '260px', objectFit: "cover" }}
                         />
                         <div className="communication">
@@ -232,7 +264,7 @@ function Main() {
                     </div>
                     <Footer />
                 </motion.div>
-            </>
+            </div>
         )
     }
 }

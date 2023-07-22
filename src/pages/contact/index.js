@@ -10,6 +10,7 @@ import "../../app/globals.css"
 import { setCookie, getCookie } from "../../Cookies/cookieUtils"
 import SocialMedia from "@/Components/SocialMedia/index"
 import { motion } from 'framer-motion'
+import Head from 'next/head'
 export default function Contact() {
 
     // useEffect(() => {
@@ -29,93 +30,102 @@ export default function Contact() {
     // }, [])
 
     return (
-        <>
-            {
-                // loading ?
-                //     <div className="loadingScreeen">
-                //         <ClimbingBoxLoader
-                //             color={"#fff"}
-                //             loading={loading}
-                //             // cssOverride={override}
-                //             size={20}
-                //         // aria-label="Loading Spinner"
-                //         // data-testid="loader"
-                //         />
-                //     </div>
+        <div lang='tr'>
+            <Head>
+                <meta charSet="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="description" content="Mobilya dekorasyonu, iç mimarlık ve tasarım hizmetleri sunan profesyonel firma. İç mekanlarınızı yeniden tasarlıyoruz." />
+                <meta name="keywords" content="mobilya,
+                    dekorasyon,
+                    iç mimarlık,
+                    tasarım,
+                    iç mekan,
+                    mobilya tasarımı,
+                    ev dekorasyonu,
+                    iç mekan tasarımı,
+                    çocuk ve genç odası,tasarımları,
+                    gardırop tasarımları,
+                    portmanto tasarımları,
+                    banyo tasarımları,
+                    yatak odası tasarımları,
+                    yemek masası tasarımları,
+                    mutfak tasarımları,
+                    mobilya montaj,
+                    mimari proje çizimi,
+                    tadilat dekorasyon
+                    " />
+                <title>İletişim</title>
+            </Head>
 
-                //     :
-                <div
-                    className='body'>
-                    <SocialMedia/>
-                    <BackToTopButton />
-                    <Navbar />
-                    <div className='globalContainer'>
-                        <div className='containerComm'>
-                            <div className='leftComm'>
-                                <div className='headerContainer'>
-                                    <h1>İLETİŞİM</h1>
-                                    <p>Sizinle görüşmekten mutluluk duyarız. İsteklerinizi bizimle paylaşın</p>
-                                </div>
-                                <Form />
+            <div
+                className='body'>
+                <SocialMedia />
+                <BackToTopButton />
+                <Navbar />
+                <div className='globalContainer'>
+                    <div className='containerComm'>
+                        <div className='leftComm'>
+                            <div className='headerContainer'>
+                                <h1>İLETİŞİM</h1>
+                                <p>Sizinle görüşmekten mutluluk duyarız. İsteklerinizi bizimle paylaşın</p>
                             </div>
-                            <div className='rightComm'>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6023.774332213233!2d29.139539239811402!3d40.9839515178999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cacf5500589c07%3A0x5cc92203c718a23f!2sCemile%20Besler%20%C4%B0lkokulu!5e0!3m2!1str!2str!4v1687428287701!5m2!1str!2str"
-                                    style={{ border: "2" }}
-                                    allowFullScreen={true}
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"></iframe>
+                            <Form />
+                        </div>
+                        <div className='rightComm'>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6023.774332213233!2d29.139539239811402!3d40.9839515178999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cacf5500589c07%3A0x5cc92203c718a23f!2sCemile%20Besler%20%C4%B0lkokulu!5e0!3m2!1str!2str!4v1687428287701!5m2!1str!2str"
+                                style={{ border: "2" }}
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <motion.div
+                        initial={{ opacity: 0, translateX: "-100%" }}
+                        animate={{ opacity: 1, translateX: 0 }}
+                        className='informationContainer'>
+                        <div className='infoDiv parlamaDiv'>
+                            <div className='infoIconDiv'>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                            </div>
+                            <div className='infoPDiv'>
+                                <h3 >Bizi Arayın</h3>
+                                <p className='firstP'>Bu numaradan bize ulaşın</p>
+                                <p className='secondP'>(+90) 532 342 83 83</p>
                             </div>
                         </div>
-                        <motion.div
-                            initial={{ opacity: 0, translateX: "-100%" }}
-                            animate={{ opacity: 1, translateX: 0 }}
-                            className='informationContainer'>
-                            <div className='infoDiv parlamaDiv'>
-                                <div className='infoIconDiv'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                                    </svg>
-                                </div>
-                                <div className='infoPDiv'>
-                                    <h3 >Bizi Arayın</h3>
-                                    <p className='firstP'>Bu numaradan bize ulaşın</p>
-                                    <p className='secondP'>(+90) 532 342 83 83</p>
-                                </div>
-                            </div>
-                            <div className='infoDiv parlamaDiv'>
-                                <div className='infoIconDiv'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
-                                    </svg>
+                        <div className='infoDiv parlamaDiv'>
+                            <div className='infoIconDiv'>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
+                                </svg>
 
-                                </div>
-                                <div className='infoPDiv '>
-                                    <h3>Ofise de Bekleriz</h3>
-                                    <p className='firstP' >Ofisimizi ziyaret edebilirsiniz</p>
-                                    <p className='secondP'>Altınşehir mahallesi/Doğanevler Caddesi </p>
-                                </div>
                             </div>
-                            <div className='infoDiv parlamaDiv'>
-                                <div className='infoIconDiv'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                                    </svg>
-
-                                </div>
-                                <div className='infoPDiv'>
-                                    <h3>E-Mail </h3>
-                                    <p className='firstP'>En kısa sürede döneceğiz</p>
-                                    <p className='secondP'>info@akcaymimarlik.com</p>
-                                </div>
+                            <div className='infoPDiv '>
+                                <h3>Ofise de Bekleriz</h3>
+                                <p className='firstP' >Ofisimizi ziyaret edebilirsiniz</p>
+                                <p className='secondP'>Altınşehir mahallesi/Doğanevler Caddesi </p>
                             </div>
-                        </motion.div>
+                        </div>
+                        <div className='infoDiv parlamaDiv'>
+                            <div className='infoIconDiv'>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                </svg>
 
-                    </div>
-                    <Footer />
+                            </div>
+                            <div className='infoPDiv'>
+                                <h3>E-Mail </h3>
+                                <p className='firstP'>En kısa sürede döneceğiz</p>
+                                <p className='secondP'>info@akcaymimarlik.com</p>
+                            </div>
+                        </div>
+                    </motion.div>
+
                 </div>
-
-            }
-
-        </>
+                <Footer />
+            </div>
+        </div>
     )
 }
