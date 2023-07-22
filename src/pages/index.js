@@ -85,32 +85,32 @@ const services = [
     }
 ];
 function Main() {
-    const [data, setData] = useState(null);
+    // const [data, setData] = useState(null);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch('https://localhost:5001/api/product/Get-All-Product', {
-                    mode: 'cors'
-                });
-                const jsonData = await response.json();
-                // console.log(jsonData);
-                setData(jsonData);
-            } catch (error) {
-                console.log(error);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const response = await fetch('https://localhost:5001/api/product/Get-All-Product', {
+    //                 mode: 'cors'
+    //             });
+    //             const jsonData = await response.json();
+    //             // console.log(jsonData);
+    //             setData(jsonData);
+    //         } catch (error) {
+    //             console.log(error);
+    //         }
+    //     };
 
-        fetchData();
-    }, []);
-    if (!data) {
-        return <div className='loadingScreeen'>
-            <PropagateLoader
-                size={15}
-                aria-label="Loading Spinner"
-                data-testid="loader"
-            /></div>;
-    } else {
+    //     fetchData();
+    // }, []);
+    // if (!data) {
+    //     return <div className='loadingScreeen'>
+    //         <PropagateLoader
+    //             size={15}
+    //             aria-label="Loading Spinner"
+    //             data-testid="loader"
+    //         /></div>;
+    // } else {
         return (
             <div lang='tr'>
                 <Head>
@@ -266,7 +266,7 @@ function Main() {
                 </motion.div>
             </div>
         )
-    }
+    //}
 }
 
 export default Main
