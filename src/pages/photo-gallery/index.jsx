@@ -8,6 +8,8 @@ import { motion } from 'framer-motion'
 import "../../app/globals.css"
 import Image from 'next/image';
 import Head from 'next/head';
+import BackToTopButton from '@/Components/BackToTopButton/BackToTopButton'
+import SocialMedia from "@/Components/SocialMedia/index"
 const hizmetlerimiz = [
     {
         name: "özel banyo"
@@ -109,17 +111,19 @@ function index() {
                     mimari proje çizimi,
                     tadilat dekorasyon
                     " />
-                <title>Fotoğraf Galerisi</title>
+                <title>Akçay Design/Fotoğraf Galerisi</title>
             </Head>
 
             <Navbar />
+
             <motion.div
 
                 initial="hidden"
                 animate="visible"
                 variants={container}
             >
-
+                <SocialMedia />
+                <BackToTopButton />
                 <div className='globalContainer'>
                     <div className='headerAndImageContainer'>
                         <h1 className='header'>FOTOĞRAF GALERİSİ</h1>
