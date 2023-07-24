@@ -31,7 +31,7 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
-    transition: all 2.5s ease;
+    transition: all 1s ease;
 }
 
 /* .containerNav a:hover{
@@ -135,6 +135,7 @@
     display: none;
 }
 
+
 /* @media screen and (max-width:740px) {
     /* .containerNav{
         justify-content: space-between;
@@ -179,6 +180,11 @@
         justify-content: center;
         align-items: center;
         z-index: 5;
+    }
+
+    .hamburgerButton svg {
+        width: 70%;
+        height: 100%;
     }
 
 
@@ -268,4 +274,5 @@
     .containerNav {
         padding: 1.5rem 1%;
     }
+
 }

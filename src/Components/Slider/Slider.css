@@ -41,7 +41,7 @@
     position: absolute;
     z-index: 3;
     left: 10%;
-    top: 45%;
+    top: 50%;
     transform: translate(0, -50%);
     display: flex;
     flex-direction: column;
@@ -85,4 +85,18 @@
 .swiper {
     margin-left: auto;
     margin-right: auto;
+}
+
+@media screen and (max-width:480px) {
+    .sliderSentence {
+        left: 5%;
+    }
+
+    .sliderSentence h1 {
+        font-size: 40px;
+    }
+
+    .sliderSentence p {
+        font-size: 15px;
+    }
 }
