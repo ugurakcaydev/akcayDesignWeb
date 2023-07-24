@@ -171,13 +171,13 @@
         min-width: 175px;
         max-width: 500px;
     }
-
-    .menuActive .hamburgerButton {
+     .hamburgerButton {
         width: 40px;
         height: auto;
         display: flex !important;
         justify-content: center;
         align-items: center;
+        z-index: 5;
     }
 
     .hamburgerButton:hover {
