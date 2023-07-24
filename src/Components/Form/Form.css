@@ -26,7 +26,7 @@ textarea:focus {
 input,
 textarea {
     font-size: 16px;
-    border: 2px outset #ccc;
+    border: 1px solid #000;
 }
 
 .firstNameDiv>input,

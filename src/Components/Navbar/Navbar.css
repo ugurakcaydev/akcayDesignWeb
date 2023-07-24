@@ -191,7 +191,8 @@
         position: absolute !important;
         top: 6.5rem;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: #212529;
+        border-top: 1px solid #fff;
         /* opacity: 1; */
         z-index: 9;
     }
@@ -223,4 +224,25 @@
         align-items: center;
         justify-content: center;
     }
+
+    .containerNav.activeNav .navbarContent.menuActive {
+        background-color: #212529;
+        transition: all 1s ease;
+        border-top: 1px solid #fff;
+    }
+
+    .containerNav.activeNav .navbarContent.menuActive .contentLi:not(:last-child) {
+        border-bottom: 1px solid #fff;
+    }
+
+    .containerNav .navbarContent.menuActive {
+        background-color: rgba(255, 255, 255,.9);
+        border-top: 1px solid #000;
+        transition: all 1s ease;
+    }
+
+    .containerNav .navbarContent.menuActive .contentLi:not(:last-child) {
+        border-bottom: 1px solid #000;
+    }
+
 }

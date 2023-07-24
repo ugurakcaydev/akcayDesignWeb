@@ -423,9 +423,9 @@
         font-weight: 600;
     }
 
-    .backToTop.visible {
+    /* .backToTop.visible {
         display: none;
-    }
+    } */
 
     .outsideProduct {
         width: 160px;

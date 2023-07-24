@@ -19,8 +19,7 @@
 
 
 .hizmetDiv {
-
-    width: 400px;
+    /* width: 400px; */
     background-repeat: no-repeat;
     background-size: cover;
     color: rgb(255, 255, 255);
@@ -34,8 +33,12 @@
     position: relative;
     border-radius: 8px;
 }
+
+.hizmetDiv img {
+    object-fit: cover;
+}
+
 .hizmetName {
-    width: 100%;
     position: absolute;
     top: 50%;
     z-index: 3;
@@ -52,31 +55,47 @@
 
 
 @media screen and (max-width:1040px) {
-    .hizmetDiv {
-        width: 250px;
+    .cartContainer {
+        padding: 0;
     }
 
+    .hizmetDiv img {
+        width: 300px;
+        height: 200px;
+    }
 }
 
 @media screen and (max-width:800px) {
-    .hizmetDiv {
+    .hizmetDiv img {
         width: 200px;
+        height: 150px;
+    }
+
+    .hizmetName {
+        font-size: 15px;
     }
 
     .cartContainer {
-        gap: 1.5rem;
+        gap: 1rem;
         padding: 0;
     }
 
 }
 
-@media screen and (max-width:470px) {
-    .hizmetDiv {
-        width: 150px;
+@media screen and (max-width:480px) {
+
+    .hizmetDiv img {
+        width: 140px;
+        height: 90px;
     }
 
     .hizmetName {
-        font-size: 15px;
+        font-size: 12px;
+    }
+
+    .cartContainer {
+        gap: 1.5rem;
+        padding: 0;
     }
 
 }
