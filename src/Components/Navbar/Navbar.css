@@ -171,7 +171,8 @@
         min-width: 175px;
         max-width: 500px;
     }
-     .hamburgerButton {
+
+    .hamburgerButton {
         width: 40px;
         height: auto;
         display: flex !important;
