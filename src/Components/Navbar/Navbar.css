@@ -46,7 +46,7 @@
 
 .activeNav a {
     color: #fff;
-    transition: all 2.5s ease;
+    transition: all 1s ease;
 }
 
 /* .activeNav a:hover{
@@ -181,6 +181,8 @@
         z-index: 5;
     }
 
+
+
     .hamburgerButton:hover {
         cursor: pointer;
     }
@@ -232,6 +234,16 @@
         border-top: 1px solid #fff;
     }
 
+    .containerNav .hamburgerButton svg {
+        fill: #000;
+        transition: all 1s ease;
+    }
+
+    .containerNav.activeNav .hamburgerButton svg {
+        fill: #fff;
+        transition: all 1s ease;
+    }
+
     .containerNav.activeNav .navbarContent.menuActive .contentLi:not(:last-child) {
         border-bottom: 1px solid #fff;
     }
@@ -246,4 +258,14 @@
         border-bottom: 1px solid #000;
     }
 
+}
+
+@media screen and (max-width:480px) {
+    .logo p {
+        font-size: 13px;
+    }
+
+    .containerNav {
+        padding: 1.5rem 1%;
+    }
 }
