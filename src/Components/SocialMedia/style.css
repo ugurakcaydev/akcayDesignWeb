@@ -62,15 +62,16 @@
     transition: all 1s ease;
     transform: translateX(5px);
 }
- a{
+
+a {
     text-decoration: none;
     color: #fff;
 }
 
 @media screen and (max-width:470px) {
     .containericons {
-        left: .1rem;
-        bottom: 0;
+        left: .5rem;
+        bottom: 1rem;
         row-gap: 0 !important;
     }
 
