@@ -172,10 +172,10 @@
         max-width: 500px;
     }
 
-    .hamburgerButton {
+    .menuActive .hamburgerButton {
         width: 40px;
         height: auto;
-        display: flex;
+        display: flex !important;
         justify-content: center;
         align-items: center;
     }
@@ -236,7 +236,7 @@
     }
 
     .containerNav .navbarContent.menuActive {
-        background-color: rgba(255, 255, 255,.9);
+        background-color: rgba(255, 255, 255, .9);
         border-top: 1px solid #000;
         transition: all 1s ease;
     }

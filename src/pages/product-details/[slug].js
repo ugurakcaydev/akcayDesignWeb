@@ -81,6 +81,16 @@ const item = {
 
 export default function Page() {
 
+
+    useEffect(() => {
+        // Burada fotoğrafların yüklendiğini simüle ediyoruz.
+        // Gerçek uygulamada decodedImages array'i gibi bir veri kaynağından
+        // fotoğrafların yüklendiğinden emin olmalısınız.
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000); // İstenilen yükleme süresi (ms) olarak değiştirilebilir.
+    }, []);
+
     const router = useRouter();
     const slug = router.query.slug
 
@@ -90,6 +100,18 @@ export default function Page() {
 
     const [selectedImage, setSelectedImage] = useState(0);
     const [selectedExp, setSelectedExp] = useState(true)
+
+
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        // Burada fotoğrafların yüklendiğini simüle ediyoruz.
+        // Gerçek uygulamada decodedImages array'i gibi bir veri kaynağından
+        // fotoğrafların yüklendiğinden emin olmalısınız.
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000); // İstenilen yükleme süresi (ms) olarak değiştirilebilir.
+    }, []);
 
     const handleImageClick = (index) => {
         setSelectedImage(index);
@@ -101,10 +123,10 @@ export default function Page() {
     return (
         <div lang='tr'>
             <Head>
-            <meta charSet="UTF-8" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                    <meta name="description" content="Mobilya dekorasyonu, iç mimarlık ve tasarım hizmetleri sunan profesyonel firma. İç mekanlarınızı yeniden tasarlıyoruz." />
-                    <meta name="keywords" content="mobilya,
+                <meta charSet="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="description" content="Mobilya dekorasyonu, iç mimarlık ve tasarım hizmetleri sunan profesyonel firma. İç mekanlarınızı yeniden tasarlıyoruz." />
+                <meta name="keywords" content="mobilya,
                     dekorasyon,
                     iç mimarlık,
                     tasarım,
