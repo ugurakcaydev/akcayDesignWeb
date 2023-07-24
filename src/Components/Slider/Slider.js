@@ -22,12 +22,12 @@ const swiperSlides = [
         description: "Yaşamak ve yaşatmak için.",
     },
     {
-        imageSrc: "/Images/images3.jpg",
+        imageSrc: "/",
         title: "Üçüncü Swiper Slide",
         description: "Üçüncü slaytın açıklaması.",
     },
     {
-        imageSrc: "/Images/images4.jpg",
+        imageSrc: "/",
         title: "Dördüncü Swiper Slide",
         description: "Dördüncü slaytın açıklaması.",
     },

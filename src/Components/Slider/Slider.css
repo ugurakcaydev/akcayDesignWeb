@@ -20,6 +20,12 @@
     cursor: pointer;
 }
 
+.swiper-slide:nth-child(3) img,
+.swiper-slide:nth-child(4) img {
+    background-color: #ccc;
+}
+
+
 /* .swiper-slide:hover {
     cursor: pointer;
 } */
