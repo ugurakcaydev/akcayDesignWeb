@@ -111,13 +111,13 @@ function Main() {
     //             data-testid="loader"
     //         /></div>;
     // } else {
-        return (
-            <div lang='tr'>
-                <Head>
-                    <meta charSet="UTF-8" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                    <meta name="description" content="Mobilya dekorasyonu, iç mimarlık ve tasarım hizmetleri sunan profesyonel firma. İç mekanlarınızı yeniden tasarlıyoruz." />
-                    <meta name="keywords" content="mobilya,
+    return (
+        <div lang='tr'>
+            <Head>
+                <meta charSet="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="description" content="Mobilya dekorasyonu, iç mimarlık ve tasarım hizmetleri sunan profesyonel firma. İç mekanlarınızı yeniden tasarlıyoruz." />
+                <meta name="keywords" content="mobilya,
                     dekorasyon,
                     iç mimarlık,
                     tasarım,
@@ -136,136 +136,136 @@ function Main() {
                     mimari proje çizimi,
                     tadilat dekorasyon
                     " />
-                    <link
-                        href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
-                        rel="stylesheet"
-                    />
-                    <title>AkcayDesign</title>
-                </Head>
+                <link
+                    href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+                    rel="stylesheet"
+                />
+                <title>AkcayDesign</title>
+            </Head>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
 
-                >
-                    <SocialMedia />
-                    <BackToTopButton />
-                    <Navbar />
-                    <Slider />
-                    <div className="content">
-                        <div className='productAndHeaderContainer'>
-                            <p className="header">
-                                ÖNE ÇIKAN ÜRÜNLERİMİZ
-                            </p>
-                            <div className='productContainer'>
-                                {products.map((product, index) => (
-                                    <div
-                                        className='outsideProduct' key={index}>
-                                        <div className='productImage'>
-                                            {
-                                                product.images.length > 0 ? <Link
-                                                    href={{
-                                                        pathname: `/product-details/${product.name.toLowerCase().replace(/\s+/g, '-')}`,
-                                                    }}
-                                                >
-                                                    <div className='containerImage'>
-                                                        <Image
-                                                            // src={`/Images/${product.name.toLowerCase().replace(/\s+/g, '-')}.jpg`}
-                                                            src={product.images}
-                                                            width={0}
-                                                            height={0}
-                                                            sizes="100vw"
-                                                            style={{ width: '100%', height: '100%', objectFit: "cover" }}
-                                                            alt="Picture of the product"
-                                                        />
-                                                    </div>
-                                                </Link> :
-                                                    <p>fotoğraf yok</p>
-
-                                            }
-
-                                        </div>
-                                        <div className='productName'>
-                                            <p>{product.name}</p>
-                                        </div>
-                                        <div className='buttonDiv'>
-                                            <Link className="button button1"
+            >
+                <SocialMedia />
+                <BackToTopButton />
+                <Navbar />
+                <Slider />
+                <div className="content">
+                    <div className='productAndHeaderContainer'>
+                        <p className="header">
+                            ÖNE ÇIKAN ÜRÜNLERİMİZ
+                        </p>
+                        <div className='productContainer'>
+                            {products.map((product, index) => (
+                                <div
+                                    className='outsideProduct' key={index}>
+                                    <div className='productImage'>
+                                        {
+                                            product.images.length > 0 ? <Link
                                                 href={{
                                                     pathname: `/product-details/${product.name.toLowerCase().replace(/\s+/g, '-')}`,
-                                                }}>İNCELE</Link>
-                                        </div>
+                                                }}
+                                            >
+                                                <div className='containerImage'>
+                                                    <Image
+                                                        // src={`/Images/${product.name.toLowerCase().replace(/\s+/g, '-')}.jpg`}
+                                                        src={product.images}
+                                                        width={0}
+                                                        height={0}
+                                                        sizes="100vw"
+                                                        style={{ width: '100%', height: '100%', objectFit: "cover" }}
+                                                        alt="Picture of the product"
+                                                    />
+                                                </div>
+                                            </Link> :
+                                                <p>fotoğraf yok</p>
+
+                                        }
+
                                     </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className='servicesAndHeaderContainer'>
-                            <p className='header'>
-                                HİZMETLERİMİZ
-                            </p>
-                            <div className="servicesContainer">
-                                {services.map((service, index) => (
-                                    <div className="imagesServices" key={index}>
-                                        <Image
-                                            src={service.image}
-                                            alt="Picture of the service"
-                                            width={0}
-                                            height={0}
-                                            sizes="100vw"
-                                            style={{ width: '100%', height: '100%', objectFit: "cover" }} />
-                                        <div className="aboutServices">{service.title}</div>
+                                    <div className='productName'>
+                                        <p>{product.name}</p>
                                     </div>
-                                ))}
-                            </div>
+                                    <div className='buttonDiv'>
+                                        <Link className="button button1"
+                                            href={{
+                                                pathname: `/product-details/${product.name.toLowerCase().replace(/\s+/g, '-')}`,
+                                            }}>İNCELE</Link>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                        <div className='formAndHeaderContainer'>
-                            <div className='header'>
-                                <p>TEKLİF FORMU</p>
-                            </div>
-                            <div className='formDiv'>
-                                <div className='formImg'>
+                    </div>
+                    <div className='servicesAndHeaderContainer'>
+                        <p className='header'>
+                            HİZMETLERİMİZ
+                        </p>
+                        <div className="servicesContainer">
+                            {services.map((service, index) => (
+                                <div className="imagesServices" key={index}>
                                     <Image
-                                        src="/Images/images2.jpg"
-                                        alt='Picture of the form'
+                                        src={service.image}
+                                        alt="Picture of the service"
                                         width={0}
                                         height={0}
                                         sizes="100vw"
-                                        style={{ width: '100%', height: '100%', objectFit: "cover", backgroundSize: "cover", borderRadius: "8px" }} />
-
+                                        style={{ width: '100%', height: '100%', objectFit: "cover" }} />
+                                    <div className="aboutServices">{service.title}</div>
                                 </div>
-                                <Form />
-                            </div>
+                            ))}
                         </div>
                     </div>
-                    <div className="containerCom">
-                        <Image
-                            className="commImg"
-                            src="/Images/coffe3.jpg"
-                            alt='Picture of the homeCoffe'
-                            width={0}
-                            height={0}
-                            sizes="100vw"
+                    <div className='formAndHeaderContainer'>
+                        <div className='header'>
+                            <p>TEKLİF FORMU</p>
+                        </div>
+                        <div className='formDiv'>
+                            <div className='formImg'>
+                                <Image
+                                    src="/Images/images2.jpg"
+                                    alt='Picture of the form'
+                                    width={0}
+                                    height={0}
+                                    sizes="100vw"
+                                    style={{ width: '100%', height: '100%', objectFit: "cover", backgroundSize: "cover", borderRadius: "8px" }} />
 
-                            style={{ width: '100%', height: '260px', objectFit: "cover" }}
-                        />
-                        <div className="communication">
-                            <div className="leftCom">
-                                <h2>KAHVEYE BEKLİYORUZ</h2>
-                                <p>Projelerimiz hakkında daha detaylı bilgi sahibi olmanız adına, sizi ofisimizde misafir etmekten mutluluk duyarız.</p>
                             </div>
-                            <Link className='commLink' href="/contact">
-                                <button className="commButton">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                                    </svg>
-                                    Bizimle İletişime Geçin
-                                </button>
-                            </Link>
+                            <Form />
                         </div>
                     </div>
-                    <Footer />
-                </motion.div>
-            </div>
-        )
+                </div>
+                <div className="containerCom">
+                    <Image
+                        className="commImg"
+                        src="/Images/coffe3.jpg"
+                        alt='Picture of the homeCoffe'
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+
+                        style={{ width: '100%', height: '260px', objectFit: "cover" }}
+                    />
+                    <div className="communication">
+                        <div className="leftCom">
+                            <h2>KAHVEYE BEKLİYORUZ</h2>
+                            <p>Projelerimiz hakkında daha detaylı bilgi sahibi olmanız adına, sizi ofisimizde misafir etmekten mutluluk duyarız.</p>
+                        </div>
+                        <Link className='commLink' href="/contact">
+                            <button className="commButton">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-3 h-3">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                                Bizimle İletişime Geçin
+                            </button>
+                        </Link>
+                    </div>
+                </div>
+                <Footer />
+            </motion.div>
+        </div>
+    )
     //}
 }
 
