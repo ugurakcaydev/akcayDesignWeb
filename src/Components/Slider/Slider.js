@@ -44,10 +44,10 @@ export default function App() {
                     keyboard={{
                         enabled: true,
                     }}
-                    // autoplay={{
-                    //     delay: 2500,
-                    //     disableOnInteraction: false,
-                    //   }}
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false,
+                      }}
                     loop={true}
                     pagination={{
                         clickable: true,
