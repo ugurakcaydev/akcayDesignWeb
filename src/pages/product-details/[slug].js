@@ -38,12 +38,23 @@ const products = [
   },
   {
     name: "Yemek Masası Tasarımlarımız",
-    images: [""], //'/Images/dinnertable1.jpg' /*['/Images/dinnertable1.jpg']*/
+    images: [
+      "/Images/bedroom1.jpg",
+      "/Images/bedroom2.jpg",
+      "/Images/bedroom3.jpg",
+      "/Images/bedroom4.jpg",
+    ], //'/Images/dinnertable1.jpg' /*['/Images/dinnertable1.jpg']*/
     slug: "yemek-masası-tasarımlarımız",
   },
   {
     name: "Yatak Odası Tasarımlarımız",
-    images: [""], //'/Images/bedroom2.jpg' /*['/Images/bedroom1.jpg', '/Images/bedroom2.jpg', '/Images/bedroom3.jpg']*/
+    images: [
+      "/Images/bedroom1.jpg",
+      "/Images/bedroom2.jpg",
+      "/Images/bedroom3.jpg",
+      "/Images/bedroom4.jpg",
+      "/Images/bedroom5.jpg",
+    ], //'/Images/bedroom2.jpg' /*['/Images/bedroom1.jpg', '/Images/bedroom2.jpg', '/Images/bedroom3.jpg']*/
     slug: "yatak-odası-tasarımlarımız",
   },
   {
@@ -52,13 +63,22 @@ const products = [
     slug: "gardırop-tasarımlarımız",
   },
   {
-    name: "Portmanto Tasarımlarımız",
-    images: [""], //'/Images/drawr1.jpg',
-    slug: "portmanto-tasarımlarımız",
+    name: "Oturma Odası Tasarımlarımız",
+    images: [
+      "/Images/livingroom1.jpg",
+      "/Images/livingroom2.jpg",
+      "/Images/livingroom3.jpg",
+      "/Images/livingroom4.jpg",
+    ], //'/Images/bedroom2.jpg' /*['/Images/bedroom1.jpg', '/Images/bedroom2.jpg', '/Images/bedroom3.jpg']*/
+    slug: "oturma-odası-tasarımlarımız",
   },
   {
     name: "Banyo Tasarımlarımız",
-    images: [""],
+    images: [
+      "/Images/bathroom1.jpg",
+      "/Images/bathroom2.jpg",
+      "/Images/bathroom3.jpg",
+    ],
     slug: "banyo-tasarımlarımız",
   },
   {
@@ -100,8 +120,10 @@ export default function Page() {
   const router = useRouter();
   const slug = router.query.slug;
 
-  const decodedImages = products.find((product) => product.slug === slug)?.images ?? [];
+  const decodedImages =
+    products.find((product) => product.slug === slug)?.images ?? [];
   const decodedName = products.find((product) => product.slug === slug)?.name;
+  console.log(decodedImages, "router!!!!");
 
   const [selectedImage, setSelectedImage] = useState(0);
   const swiperRef = useRef(null);
@@ -109,15 +131,12 @@ export default function Page() {
 
   const [isLoading, setIsLoading] = useState(true);
 
-  
-
   useEffect(() => {
     // Burada fotoğrafların yüklendiğini simüle ediyoruz.
     // Gerçek uygulamada decodedImages array'i gibi bir veri kaynağından
     // fotoğrafların yüklendiğinden emin olmalısınız.
     setTimeout(() => {
       setIsLoading(false);
-    
     }, 2000); // İstenilen yükleme süresi (ms) olarak değiştirilebilir.
   }, []);
   const item = {
@@ -133,8 +152,6 @@ export default function Page() {
   const handleExpClick = (boolean) => {
     setSelectedExp(boolean);
   };
-
-  
 
   return (
     <div lang="tr">
@@ -213,7 +230,7 @@ export default function Page() {
                     <div>Fotoğraf Bekleniyor..</div>
                   )}
                   <Swiper
-                  ref={swiperRef}
+                    ref={swiperRef}
                     slidesPerView={1}
                     spaceBetween={20}
                     keyboard={{
@@ -237,7 +254,6 @@ export default function Page() {
                               width: "100%",
                               height: "100%",
                               objectFit: "contain",
-                             
                             }}
                             alt="Picture of the bigSlug"
                           />
