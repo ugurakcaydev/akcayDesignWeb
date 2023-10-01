@@ -1,6 +1,6 @@
 "use client"
 import { Autoplay, Pagination, Keyboard, Parallax } from "swiper";
-import React, { useRef, useState } from "react";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -22,12 +22,12 @@ const swiperSlides = [
         description: "Yaşamak ve yaşatmak için.",
     },
     {
-        imageSrc: "/",
+        imageSrc: "/Images/images3.jpg",
         title: "Üçüncü Swiper Slide",
         description: "Üçüncü slaytın açıklaması.",
     },
     {
-        imageSrc: "/",
+        imageSrc: "/Images/images4.jpg",
         title: "Dördüncü Swiper Slide",
         description: "Dördüncü slaytın açıklaması.",
     },
