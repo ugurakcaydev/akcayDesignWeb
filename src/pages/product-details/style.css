@@ -44,10 +44,6 @@
     overflow-x: hidden;
     row-gap: 2rem;
 }
-.smallImages{
-    min-width: 140px;
-    
-}
 
 .smallImageContainer::-webkit-scrollbar {
     width: 7px;
